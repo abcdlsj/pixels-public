@@ -1,0 +1,1445 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dockhand</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Fusion Pixel 12px (SIL OFL 1.1, github.com/TakWolf/fusion-pixel-font), subset to the characters on this page */
+@font-face { font-family: 'DockPixel'; src: url(data:font/woff2;base64,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) format('woff2'); font-display: block; }
+/* Layout: one quiet column — the log line and the boat's gauges on top, the diorama at a modest fixed scale in the middle,
+   the crate on the hook and the one action (sail) below. Rules live behind a small button. Text sizes are snapped from script
+   to whole multiples of the font's 12px grid in device pixels. */
+:root {
+  --mist: #e6ecee;      /* page, and the paper the diorama dissolves into (same as the canvas background) */
+  --ink: #1d2a33;
+  --ink-soft: #5f6f78;
+  --buoy: #e2622f;      /* accent: buoy orange */
+  --rope: #cbb995;      /* gauge track */
+  --danger: #c8393b;
+  --px: 'DockPixel', 'PingFang SC', 'Microsoft YaHei', monospace;
+  --t0: 12px;           /* small print */
+  --t1: 12px;           /* running text */
+  --t2: 24px;           /* title and the day's money */
+  color-scheme: light;
+}
+html, body { height: 100%; }
+html { padding-top: env(safe-area-inset-top, 0px); box-sizing: border-box; }
+[hidden] { display: none !important; }
+body {
+  margin: 0; box-sizing: border-box; background: var(--mist); color: var(--ink); font-family: var(--px); font-size: var(--t1); line-height: 1.4;
+  -webkit-font-smoothing: none; font-synthesis: none; font-weight: 400;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: flex; flex-direction: column; overflow: hidden; user-select: none; -webkit-user-select: none;
+}
+b { font-weight: 400; }
+.row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 28px; max-width: 900px; width: 100%; margin: 0 auto; }
+.top { padding-block: 16px 4px; position: relative; z-index: 25; }  /* stays clickable above the manifest overlay */
+h1 { font-size: var(--t2); font-weight: 400; margin: 0; line-height: 1; }
+.stat { display: flex; align-items: baseline; gap: 8px; color: var(--ink-soft); white-space: nowrap; }
+.stat b { color: var(--ink); font-variant-numeric: tabular-nums; }
+.stat.warn b { color: var(--danger); }
+.spacer { flex: 1; }
+.tools { display: flex; gap: 10px; align-items: center; }
+.gauges { padding-block: 8px; }
+.gauge { display: flex; align-items: center; gap: 10px; color: var(--ink-soft); white-space: nowrap; }
+.track { position: relative; width: 108px; height: 10px; background: var(--rope); }
+.track .zone { position: absolute; top: 0; bottom: 0; background: var(--danger); opacity: .45; }
+.track .needle { position: absolute; top: -4px; width: 4px; height: 18px; background: var(--ink); transform: translateX(-2px); }
+.track .fill { position: absolute; left: 0; top: 0; bottom: 0; background: var(--ink); }
+.gauge b { color: var(--ink); min-width: 5.5em; font-variant-numeric: tabular-nums; }
+.gauge.warn b { color: var(--danger); }
+#stage { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; position: relative; }
+canvas { display: block; image-rendering: pixelated; touch-action: none; outline: none; cursor: crosshair; }
+canvas.icon { image-rendering: pixelated; flex: none; cursor: default; }
+/* on touch screens the whole page is the crane's trackpad: no scrolling or zoom gestures there */
+header, .gauges, #stage, footer { touch-action: none; }
+.touch-only { display: none; }
+@media (pointer: coarse) { .touch-only { display: inline-block; } }
+#toast { position: absolute; left: 50%; top: 4px; transform: translateX(-50%); background: var(--ink); color: var(--mist); padding: 6px 14px; white-space: nowrap; pointer-events: none; transition: opacity .25s; }
+#toast[data-show="0"] { opacity: 0; }
+.bottom { padding-block: 6px max(18px, env(safe-area-inset-bottom, 0px)); }
+.hook { display: flex; align-items: center; gap: 14px; min-width: 0; }
+#cIcon { width: 48px; display: flex; align-items: center; justify-content: center; flex: none; }
+.hook .sub { color: var(--ink-soft); font-size: var(--t0); }
+.btns { display: flex; gap: 10px; flex: none; }
+@media (max-width: 640px) { .bottom { flex-wrap: nowrap; } .bottom .spacer { display: none; } .hook { flex: 1; } button { padding: 6px 12px; } }
+button { font: inherit; padding: 6px 18px; border: 3px solid var(--ink); background: transparent; color: var(--ink); cursor: pointer; }
+button.primary { background: var(--buoy); border-color: var(--buoy); color: #fff; }
+button.small { font-size: var(--t0); padding: 2px 10px; border-width: 2px; }
+button:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
+button:disabled { opacity: .35; cursor: default; }
+/* rules: a small button; the card shows on hover, keyboard focus, or a tap (data-open) */
+.tip { position: relative; }
+.tip-body { display: none; position: absolute; right: 0; top: calc(100% + 8px); z-index: 30; width: min(340px, calc(100vw - 32px)); background: var(--mist);
+  border: 3px solid var(--ink); padding: 12px 14px; font-size: var(--t0); color: var(--ink); white-space: normal; }
+.tip:hover .tip-body, .tip:focus-within .tip-body, .tip[data-open="1"] .tip-body { display: block; }
+.tip-body ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.tip-body li { padding-left: 1em; text-indent: -1em; }
+.tip-body li::before { content: '· '; }
+.tip-body em { font-style: normal; color: var(--buoy); }
+#over { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(230, 236, 238, .9); padding: 12px; z-index: 20; }
+#over .card { background: var(--mist); border: 3px solid var(--ink); padding: 18px 20px; width: min(460px, 100%); max-height: 100%; overflow: auto; display: grid; gap: 10px; }
+#over h2 { font-size: var(--t2); font-weight: 400; margin: 0; line-height: 1.1; }
+#over p { margin: 0; color: var(--ink-soft); }
+#over p.warn { color: var(--danger); }
+#over p.total { color: var(--ink); font-size: var(--t2); }
+.manifest { border-collapse: collapse; width: 100%; }
+.manifest th { font-weight: 400; color: var(--ink-soft); font-size: var(--t0); text-align: left; padding: 0 8px 4px 0; }
+.manifest td { padding: 3px 8px 3px 0; vertical-align: middle; }
+.manifest td.ic { width: 1%; }
+.manifest td.num, .manifest th.num { text-align: right; padding-right: 0; font-variant-numeric: tabular-nums; }
+.wbar { display: inline-flex; gap: 2px; vertical-align: middle; margin-right: 6px; }
+.wbar i { width: 6px; height: 10px; background: var(--ink); }
+.wbar i.off { background: var(--rope); }
+.ledger { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.ledger li { display: flex; gap: 12px; align-items: baseline; }
+.ledger .mid { color: var(--ink-soft); flex: 1; }
+@media (max-width: 640px) {
+  .row { gap: 6px 16px; }
+  .top { padding-top: 10px; }
+  .track { width: 70px; }
+  .gauge b { min-width: 0; }
+}
+</style>
+</head>
+<body>
+
+
+<header class="row top">
+  <h1 data-i18n="title">Dockhand</h1>
+  <div class="stat"><span id="hBoat"></span><b id="hBoatName"></b></div>
+  <div class="stat money"><span data-i18n="today">Today</span> <b id="hScore">0</b></div>
+  <div class="stat"><span data-i18n="thisBoat">This boat</span> <b id="hBoatVal">0</b></div>
+  <div class="stat" id="cTide" hidden><span data-i18n="tide">Tide</span> <b id="hTide"></b></div>
+  <div class="spacer"></div>
+  <div class="tools">
+    <div class="tip" id="tip">
+      <button class="small" id="bRules" type="button" aria-describedby="rules" data-i18n="rules">Rules</button>
+      <div class="tip-body" id="rules" role="tooltip">
+        <ul id="rulesList"></ul>
+      </div>
+    </div>
+    <button class="small" id="lang" type="button"></button>
+    <button class="small" id="mute" type="button" aria-pressed="false"></button>
+  </div>
+</header>
+<div class="row gauges">
+  <div class="gauge" id="gRoll"><span data-i18n="roll">Roll</span> <div class="track"><div class="zone" style="left:0"></div><div class="zone" style="right:0"></div><div class="needle" id="nRoll" style="left:50%"></div></div> <b id="vRoll">0°</b></div>
+  <div class="gauge" id="gPitch"><span data-i18n="pitch">Pitch</span> <div class="track"><div class="zone" style="left:0"></div><div class="zone" style="right:0"></div><div class="needle" id="nPitch" style="left:50%"></div></div> <b id="vPitch">0°</b></div>
+  <div class="gauge" id="gDraft"><span data-i18n="freeboard">Freeboard</span> <div class="track"><div class="fill" id="fDraft" style="width:100%"></div></div> <b id="vDraft">75cm</b></div>
+</div>
+<main id="stage">
+  <canvas id="c" tabindex="0" data-i18n-label="canvasLabel" aria-label="A dock and a cargo boat. Click the deck to drop the crate."></canvas>
+  <div id="toast" data-show="0"></div>
+</main>
+<div id="over" hidden><div class="card" id="overCard"></div></div>
+<footer class="row bottom">
+  <div class="hook"><div id="cIcon"></div><div><div id="cName"></div><div class="sub" id="cSub"></div></div></div>
+  <div class="spacer"></div>
+  <div class="btns"><button id="bRot" class="touch-only" type="button" data-i18n="rotate">Rotate</button><button id="bGo" class="primary" type="button" data-i18n="sail">Sail</button></div>
+</footer>
+
+<script>
+'use strict';
+/* =====================================================================
+   Dockhand — a tiny software rasteriser: orthographic camera, depth buffer,
+   rotated triangles, a light-space shadow map, hue-shifted ramps with a
+   Bayer screen, and outlines from object ids + depth.
+   ===================================================================== */
+/* the picture: 320x228 game pixels on desktop. On a narrow screen the canvas is sized at boot so each game pixel is
+   about 1.33 CSS px (a whole number of device pixels) and the scene fills the width, a little larger than at 1x. */
+const VIEW = (() => {
+  const st = document.getElementById('stage').getBoundingClientRect(), dpr = window.devicePixelRatio || 1;
+  /* desktop: rendered at R x 320x228 when the stage gives the 1x picture at least 2 device px per game pixel,
+     so the picture keeps its size and gets finer */
+  if (st.width >= 560 || st.width < 200 || st.height < 200) {
+    const R = Math.min(st.width * dpr / 320, st.height * dpr / 228) >= 2 ? 2 : 1;
+    return { W: 320 * R, H: 228 * R, S: 21 * R, R };
+  }
+  const k = Math.max(1, Math.round(1.34 * dpr));
+  const W = Math.floor(st.width * dpr / k), H = Math.max(160, Math.min(Math.floor(st.height * dpr / k), Math.round(W * 1.05)));
+  return { W, H, S: .95 * W / 14.6, R: 1 };
+})();
+const W = VIEW.W, H = VIEW.H, S = VIEW.S, R = VIEW.R;
+const PHI = 35 * Math.PI / 180, SP = Math.sin(PHI), CP = Math.cos(PHI), R2 = Math.SQRT1_2;
+const CAM = [CP * R2, CP * R2, SP];          // toward the camera
+const RT = [R2, -R2, 0];                      // screen right
+const UP = [-SP * R2, -SP * R2, CP];          // screen up
+const OX = W / 2 + 2 * R, OY = H / 2 - 2 * R;
+const BG = [230, 236, 238];
+const STILL = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+const dot = (a, b) => a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
+const sub = (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]];
+const cross = (a, b) => [a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2], a[0] * b[1] - a[1] * b[0]];
+const norm = a => { const l = Math.hypot(a[0], a[1], a[2]) || 1; return [a[0] / l, a[1] / l, a[2] / l]; };
+const clamp = (v, a, b) => v < a ? a : v > b ? b : v;
+const lerp = (a, b, t) => a + (b - a) * t;
+const rgb = (r, g, b) => (255 << 24 | clamp(b | 0, 0, 255) << 16 | clamp(g | 0, 0, 255) << 8 | clamp(r | 0, 0, 255)) >>> 0;
+function hash(x, y) { const s = Math.sin(x * 157.31 + y * 271.13) * 24634.6345; return s - Math.floor(s); }
+function noise(x, y) {
+  const ix = Math.floor(x), iy = Math.floor(y), fx = x - ix, fy = y - iy;
+  const sx = fx * fx * (3 - 2 * fx), sy = fy * fy * (3 - 2 * fy);
+  return lerp(lerp(hash(ix, iy), hash(ix + 1, iy), sx), lerp(hash(ix, iy + 1), hash(ix + 1, iy + 1), sx), sy);
+}
+const BAY = [0, 8, 2, 10, 12, 4, 14, 6, 3, 11, 1, 9, 15, 7, 13, 5].map(v => (v + .5) / 16);
+const bay = (x, y) => BAY[(y & 3) * 4 + (x & 3)];
+
+/* light from the upper left of the screen, so shadows fall to the lower right */
+const LIGHT = norm([-0.62, 0.5, 0.62]);
+const LR = norm([-LIGHT[1], LIGHT[0], 0]), LU = cross(LIGHT, LR);
+
+/* ---------- colour ramps: six steps, shadows drift violet, lights drift warm ---------- */
+const COOL = [52, 40, 92], WARM = [255, 236, 190];
+function ramp(c) {
+  const m = [.36, .54, .72, .88, 1, 1.1], cool = [.36, .22, .1, .03, 0, 0], warm = [0, 0, 0, 0, .06, .22];
+  return m.map((k, i) => {
+    let r = c[0] * k, g = c[1] * k, b = c[2] * k;
+    r = lerp(r, COOL[0], cool[i]); g = lerp(g, COOL[1], cool[i]); b = lerp(b, COOL[2], cool[i]);
+    r = lerp(r, WARM[0], warm[i]); g = lerp(g, WARM[1], warm[i]); b = lerp(b, WARM[2], warm[i]);
+    return rgb(r, g, b);
+  });
+}
+/* light levels are tuned so lit tops, lit sides and unlit sides land mid-step; the screen only mixes where texture pushes a pixel near a step */
+const pick = (rp, l, ix, iy) => rp[clamp(Math.floor(l * 5.6 - .15 + (bay(ix, iy) - .5) * .35), 0, 5)];
+/* ---------- language: English and Chinese, switchable at any time ---------- */
+const STRINGS = {
+  en: {
+    title: 'Dockhand', lang: '中文', soundOn: 'Sound on', soundOff: 'Sound off', rules: 'Rules',
+    today: 'Today', thisBoat: 'This boat', tide: 'Tide', seconds: '{s}s', full: 'full',
+    boatOf: 'Boat {i}/{n}', roll: 'Roll', pitch: 'Pitch', freeboard: 'Freeboard',
+    rotate: 'Rotate', sail: 'Sail', more: '{n} more to come',
+    canvasLabel: 'A dock and a cargo boat. Click the deck to drop the crate.',
+    manifestTitle: 'Boat {i}: {name}', manifest: 'Manifest', colCargo: 'Cargo', colWeight: 'Weight', colQty: 'Qty',
+    tall: ' (tall)', tons: '{n} t', sum: '{n} crates, {w} t', once: 'You only see this once', start: 'Start loading',
+    touchHint: 'Drag anywhere to move the crane, tap to drop',
+    notFlat: 'Not flat', tooHigh: 'Too high', noRoom: 'No room',
+    capsized: 'Capsized', swamped: 'Swamped', paid: '+{v} freight', lost: 'Lost overboard −{v}',
+    dayDone: 'Day done', sank: 'sank', crates: '{n} crates', lostShort: '−{n} lost',
+    total: 'Today {s}', newBest: 'new best', best: 'best {b}', again: 'Another day',
+    ruleList: [
+      'Desktop: click to drop; R, right-click or the wheel rotates',
+      'Phone: drag anywhere to move the crane, tap to drop',
+      'Stack up to three high: 2nd layer <em>×1.5</em>, 3rd layer <em>×2</em>',
+      'A fully covered deck <em>×1.3</em>',
+      'Tilt into the red and the top crates slide off',
+      'A crate in the sea is <em>charged</em> at its value',
+      'Capsize or swamp and the boat scores 0',
+    ],
+    boats: ['Skiff', 'Narrowboat', 'Flat barge'],
+    cargo: { wood: 'Crate', long: 'Long crate', big: 'Big crate', iron: 'Iron box', tall: 'Cabinet', fruit: 'Fruit basket',
+      lumber: 'Lumber', machine: 'Machine', drum: 'Oil drum', fridge: 'Fridge', hay: 'Hay bale' },
+  },
+  zh: {
+    title: '码头装货', lang: 'EN', soundOn: '声音 开', soundOff: '声音 关', rules: '规则',
+    today: '今日运费', thisBoat: '这船能赚', tide: '潮水', seconds: '{s} 秒', full: '满载',
+    boatOf: '第 {i}/{n} 条', roll: '左右', pitch: '前后', freeboard: '离水',
+    rotate: '转向', sail: '开船结算', more: '后面还有 {n} 箱',
+    canvasLabel: '码头和货船，点击甲板放下货箱',
+    manifestTitle: '第 {i} 条船：{name}', manifest: '货单', colCargo: '货物', colWeight: '每箱重', colQty: '数量',
+    tall: '（高）', tons: '{n} 吨', sum: '共 {n} 箱 {w} 吨', once: '货单只看这一次', start: '开始装货',
+    touchHint: '空白处拖动移动吊车，轻点放下',
+    notFlat: '底下不平', tooHigh: '太高了', noRoom: '放不下',
+    capsized: '翻船了', swamped: '进水了', paid: '运费 +{v}', lost: '落海 −{v}',
+    dayDone: '收工', sank: '沉了', crates: '{n} 箱', lostShort: '赔{n}',
+    total: '今天运费 {s}', newBest: '新纪录', best: '最好 {b}', again: '再来一天',
+    ruleList: [
+      '电脑：单击放下，R 键、右键或滚轮转向',
+      '手机：空白处拖动移动吊车，轻点放下',
+      '最多叠三层，第二层 <em>×1.5</em>，第三层 <em>×2</em>',
+      '甲板铺满 <em>×1.3</em>',
+      '倾斜进红区，顶上的箱子会滑走',
+      '箱子掉进海里，按价值<em>倒扣</em>',
+      '翻船或进水，这船记 0',
+    ],
+    boats: ['小舢板', '窄货船', '平底驳'],
+    cargo: { wood: '木箱', long: '长木箱', big: '大货箱', iron: '铁箱', tall: '高柜', fruit: '果筐',
+      lumber: '木料', machine: '机器', drum: '油桶', fridge: '冰柜', hay: '草垛' },
+  },
+};
+/* a single-language build (build.py --lang zh) pins this and drops the switch */
+const ONLY_LANG = null;
+let LANG = (() => {
+  if (ONLY_LANG) return ONLY_LANG;
+  try { const saved = localStorage.getItem('dock-lang'); if (saved && STRINGS[saved]) return saved; } catch (e) { /* storage blocked */ }
+  return /^zh/i.test(navigator.language || '') ? 'zh' : 'en';
+})();
+/* tx('boatOf', { i: 1, n: 3 }) → 'Boat 1/3' */
+function tx(key, vars) {
+  let s = STRINGS[LANG][key];
+  if (s == null && STRINGS.en) s = STRINGS.en[key];
+  if (vars) for (const k in vars) s = s.split('{' + k + '}').join(vars[k]);
+  return s;
+}
+const cargoName = type => STRINGS[LANG].cargo[type];
+const boatName = idx => STRINGS[LANG].boats[idx];
+/* fill every static label, then let the game redraw anything it built itself */
+function applyLang() {
+  document.documentElement.lang = LANG === 'zh' ? 'zh-CN' : 'en';
+  document.title = tx('title');
+  document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = tx(el.dataset.i18n); });
+  document.querySelectorAll('[data-i18n-label]').forEach(el => el.setAttribute('aria-label', tx(el.dataset.i18nLabel)));
+  const ul = document.getElementById('rulesList');
+  ul.innerHTML = STRINGS[LANG].ruleList.map(r => `<li>${r}</li>`).join('');
+  const btn = document.getElementById('lang');
+  if (!btn) return;
+  btn.textContent = tx('lang');
+  btn.setAttribute('aria-label', LANG === 'zh' ? 'Switch to English' : '切换到中文');
+}
+function setLang(l) {
+  LANG = l;
+  try { localStorage.setItem('dock-lang', l); } catch (e) { /* storage blocked */ }
+  applyLang();
+  if (typeof onLangChange === 'function') onLangChange();
+}
+applyLang();
+/* ---------- materials: each returns a final colour for a pixel ---------- */
+const edgeDist = (u, v, q) => Math.min(u * q.su, (1 - u) * q.su, v * q.sv, (1 - v) * q.sv);
+/* crate looks are parametrised by colour; a crate's pattern tells its kind, its colour is random like a falling block's */
+const KIND = {
+  crate(base, opt) {
+    const rp = ramp(base);
+    return (l, u, v, q, ix, iy) => {
+      const e = edgeDist(u, v, q);
+      if (e < .075) return pick(rp, l + .07, ix, iy);
+      if (opt.brace && !q.top && Math.abs(u - v) < .07) return pick(rp, l + .08, ix, iy);
+      if (opt.brace && q.top && (Math.abs(u - v) < .04 || Math.abs(u + v - 1) < .04)) return pick(rp, l - .24, ix, iy);
+      const along = q.top ? u * q.su : v * q.sv, k = Math.floor(along / .2);
+      if (along / .2 - k < .16) return pick(rp, l - .2, ix, iy);
+      return pick(rp, l + (hash(k, q.obj) - .5) * .09, ix, iy);
+    };
+  },
+  metal(base) {
+    const rp = ramp(base);
+    return (l, u, v, q, ix, iy) => {
+      if (edgeDist(u, v, q) < .05) return pick(rp, l - .14, ix, iy);
+      if (!q.top && (u * q.su / .17) % 1 < .3) return pick(rp, l + .12, ix, iy);
+      return pick(rp, l, ix, iy);
+    };
+  },
+  cab(base, opt) {
+    const rp = ramp(base), brass = ramp([226, 186, 92]);
+    return (l, u, v, q, ix, iy) => {
+      if (edgeDist(u, v, q) < .06) return pick(rp, l - .1, ix, iy);
+      if (q.top) return pick(rp, l, ix, iy);
+      if (opt.fridge) {
+        if (Math.abs(v - .5) * q.sv < .03) return pick(rp, l - .22, ix, iy);
+        if (Math.abs(u - .86) * q.su < .04 && ((v > .58 && v < .8) || (v > .2 && v < .42))) return pick(brass, l + .1, ix, iy);
+        return pick(rp, l, ix, iy);
+      }
+      if (Math.abs(u - .5) * q.su < .035) return pick(rp, l - .22, ix, iy);
+      if (Math.abs(u - .5) * q.su < .14 && Math.abs(v - .52) * q.sv < .05) return pick(brass, l + .1, ix, iy);
+      return pick(rp, l, ix, iy);
+    };
+  },
+  fruit(base) {
+    const slat = ramp([214, 178, 118]), fruit = ramp(base);
+    return (l, u, v, q, ix, iy) => {
+      if (edgeDist(u, v, q) < .06) return pick(slat, l, ix, iy);
+      if ((v * q.sv / .19) % 1 < .38) return pick(fruit, l - .08 + (hash(ix >> 1, iy >> 1) - .5) * .2, ix, iy);
+      return pick(slat, l, ix, iy);
+    };
+  },
+  lumber(base) {
+    const rp = ramp(base), strap = ramp([60, 60, 70]);
+    return (l, u, v, q, ix, iy) => {
+      if (!q.top && (u * q.su % 1.5) > .66 && (u * q.su % 1.5) < .78) return pick(strap, l, ix, iy);
+      if (q.top) return (u * q.su / .2) % 1 < .12 ? pick(rp, l - .2, ix, iy) : pick(rp, l + (hash(Math.floor(u * q.su / .2), 7) - .5) * .1, ix, iy);
+      if ((v * q.sv / .16) % 1 < .16) return pick(rp, l - .22, ix, iy);
+      return pick(rp, l + (hash(Math.floor(v * q.sv / .16), q.obj) - .5) * .12, ix, iy);
+    };
+  },
+  machine(base) {
+    const rp = ramp(base), ink = ramp([44, 44, 50]), hazard = ramp([236, 196, 60]);
+    return (l, u, v, q, ix, iy) => {
+      const e = edgeDist(u, v, q);
+      if (e < .05) return pick(rp, l - .14, ix, iy);
+      if (!q.top && v > .7 && v < .86) return ((ix + iy) >> R) & 1 ? pick(ink, l, ix, iy) : pick(hazard, l, ix, iy);
+      if (q.top && e < .14 && (Math.floor(u * q.su * 6) + Math.floor(v * q.sv * 6)) % 4 === 0) return pick(rp, l + .2, ix, iy);
+      if (q.top && Math.abs(u - .5) * q.su < .25 && (v * q.sv / .1) % 1 < .4) return pick(ink, l + .1, ix, iy);
+      return pick(rp, l, ix, iy);
+    };
+  },
+  drum(base) {
+    const rp = ramp(base);
+    return (l, u, v, q, ix, iy) => {
+      if (q.top) {
+        const e = edgeDist(u, v, q);
+        if (e < .08) return pick(rp, l - .16, ix, iy);
+        if (Math.hypot(u - .7, v - .7) < .1) return pick(rp, l + .22, ix, iy);
+        return pick(rp, l, ix, iy);
+      }
+      if ((v > .2 && v < .27) || (v > .72 && v < .79)) return pick(rp, l + .14, ix, iy);
+      if ((v > .27 && v < .31) || (v > .79 && v < .83)) return pick(rp, l - .18, ix, iy);
+      return pick(rp, l + (Math.abs(u - .35) < .06 ? .1 : 0), ix, iy);
+    };
+  },
+  hay(base) {
+    const rp = ramp(base), twine = ramp([128, 92, 52]);
+    return (l, u, v, q, ix, iy) => {
+      const a = q.top ? v : u;
+      if ((a > .3 && a < .35) || (a > .65 && a < .7)) return pick(twine, l, ix, iy);
+      return pick(rp, l + (hash(ix, iy * 3) - .5) * .28, ix, iy);
+    };
+  },
+};
+const MAT = {};
+MAT.deck = (() => {
+  const rp = ramp([172, 130, 86]);
+  return (l, u, v, q, ix, iy) => {
+    const a = u * q.su / .34, k = Math.floor(a);
+    if (a - k < .1) return pick(rp, l - .17, ix, iy);
+    const b = v * q.sv / 1.6 + hash(k, 3);
+    if (b % 1 < .025) return pick(rp, l - .17, ix, iy);
+    return pick(rp, l + (hash(k, Math.floor(b)) - .5) * .08, ix, iy);
+  };
+})();
+function hullMat(paint) {
+  const rp = ramp(paint), stripe = ramp([232, 226, 208]), anti = ramp([156, 58, 52]);
+  return (l, u, v, q, ix, iy) => {
+    const z = lerp(q.z0, q.z1, v);
+    if (z < .05) return pick(anti, l, ix, iy);
+    if (z > q.z1 - .14) return pick(stripe, l, ix, iy);
+    if (((z + 2) / .2) % 1 < .12) return pick(rp, l - .14, ix, iy);
+    return pick(rp, l, ix, iy);
+  };
+}
+MAT.cream = (() => { const rp = ramp([224, 214, 186]); return (l, u, v, q, ix, iy) => pick(rp, l, ix, iy); })();
+MAT.dock = (() => {
+  const rp = ramp([150, 128, 108]);
+  return (l, u, v, q, ix, iy) => {
+    if (!q.top) return pick(rp, l - .08, ix, iy);
+    const a = v * q.sv / .32, k = Math.floor(a);
+    if (a - k < .14) return pick(rp, l - .2, ix, iy);
+    if ((u * q.su + .15) % 1.5 < .06 && hash(k, 9) > .35) return pick(rp, l - .14, ix, iy);
+    return pick(rp, l + (hash(k, 4) - .5) * .12, ix, iy);
+  };
+})();
+MAT.post = (() => { const rp = ramp([92, 74, 60]); return (l, u, v, q, ix, iy) => pick(rp, l + ((v * q.sv) % .5 < .06 ? -.15 : 0), ix, iy); })();
+MAT.iron = (() => { const rp = ramp([62, 70, 84]); return (l, u, v, q, ix, iy) => pick(rp, l, ix, iy); })();
+MAT.crane = (() => {
+  const rp = ramp([232, 170, 52]), dark = ramp([60, 60, 68]);
+  return (l, u, v, q, ix, iy) => ((u * q.su + v * q.sv) / .3) % 1 < .5 && q.stripe ? pick(dark, l, ix, iy) : pick(rp, l, ix, iy);
+})();
+MAT.flag = (() => { const rp = ramp([220, 72, 58]); return (l, u, v, q, ix, iy) => pick(rp, l + .15, ix, iy); })();
+MAT.markOk = (l, u, v, q, ix, iy) => ((ix + iy) >> R) & 1 ? rgb(255, 214, 72) : rgb(204, 150, 36);
+MAT.markBad = (l, u, v, q, ix, iy) => ((ix + iy) >> R) & 1 ? rgb(232, 76, 64) : rgb(160, 40, 44);
+/* ---------- frame buffers ---------- */
+const canvas = document.getElementById('c');
+canvas.width = W; canvas.height = H;
+const ctx = canvas.getContext('2d');
+const img = ctx.createImageData(W, H), pix = new Uint32Array(img.data.buffer);
+const N = W * H;
+const zb = new Float32Array(N), qb = new Int32Array(N), ob = new Int32Array(N);
+const ub = new Float32Array(N), vb = new Float32Array(N), wxb = new Float32Array(N), wyb = new Float32Array(N), wzb = new Float32Array(N);
+
+/* the water plane (z = 0) is the same pixels every frame: precompute where each pixel hits it */
+const waterX = new Float32Array(N), waterY = new Float32Array(N), waterD = new Float32Array(N), waterIn = new Uint8Array(N), waterN = new Float32Array(N);
+const BGC = rgb(...BG);
+for (let iy = 0; iy < H; iy++) for (let ix = 0; ix < W; ix++) {
+  const i = iy * W + ix, a = (ix + .5 - OX) / S, b = -(iy + .5 - OY) / S;
+  const p0 = [a * RT[0] + b * UP[0], a * RT[1] + b * UP[1], a * RT[2] + b * UP[2]];
+  const t = -p0[2] / CAM[2];
+  const x = p0[0] + t * CAM[0], y = p0[1] + t * CAM[1];
+  waterX[i] = x; waterY[i] = y; waterD[i] = t;
+  const ex = Math.abs(x - .1) / 5.5, ey = Math.abs(y - .3) / 7.3;
+  const r = Math.pow(ex ** 2.6 + ey ** 2.6, 1 / 2.6) + (noise(x * .9, y * .9) - .5) * .09;
+  waterIn[i] = r < .93 || (r < 1.02 && hash(ix, iy) > (r - .93) / .09) ? (r > .86 ? 2 : 1) : 0;
+  waterN[i] = noise(x * .55, y * .4);
+}
+
+/* ---------- shadow map (light space, max depth = closest to the light) ---------- */
+const SM = 420 * R;
+const smap = new Float32Array(SM * SM);
+let smMinX = 1e9, smMinY = 1e9, smMaxX = -1e9, smMaxY = -1e9;
+for (const x of [-11, 11]) for (const y of [-12, 12]) for (const z of [-1, 7]) {
+  const p = [x, y, z], a = dot(p, LR), b = dot(p, LU);
+  smMinX = Math.min(smMinX, a); smMaxX = Math.max(smMaxX, a); smMinY = Math.min(smMinY, b); smMaxY = Math.max(smMaxY, b);
+}
+const smScale = (SM - 1) / Math.max(smMaxX - smMinX, smMaxY - smMinY);
+const [LR0, LR1, LR2] = LR, [LU0, LU1, LU2] = LU, [LI0, LI1, LI2] = LIGHT;
+function shadowAt(x, y, z) {
+  const sx = ((x * LR0 + y * LR1 + z * LR2 - smMinX) * smScale) | 0, sy = ((x * LU0 + y * LU1 + z * LU2 - smMinY) * smScale) | 0;
+  if (sx < 0 || sy < 0 || sx >= SM || sy >= SM) return false;
+  return smap[sy * SM + sx] > x * LI0 + y * LI1 + z * LI2 + .07;
+}
+
+/* ---------- geometry: quads in world space ---------- */
+let quads = [];
+/* a quad: four world points (in order around the face), material, object id, plus extra fields for materials */
+function quad(p, mat, obj, inside, extra) {
+  let n = norm(cross(sub(p[1], p[0]), sub(p[3], p[0])));
+  const c = [(p[0][0] + p[2][0]) / 2, (p[0][1] + p[2][1]) / 2, (p[0][2] + p[2][2]) / 2];
+  if (dot(n, sub(c, inside)) < 0) n = [-n[0], -n[1], -n[2]];
+  const q = { p, mat, obj, n, su: Math.hypot(...sub(p[1], p[0])), sv: Math.hypot(...sub(p[3], p[0])), top: n[2] > .7, nl: dot(n, LIGHT), shadowOnly: false };
+  if (extra) Object.assign(q, extra);
+  quads.push(q);
+  return q;
+}
+/* a box given in some local frame; T maps local points to world */
+function box(x0, y0, z0, x1, y1, z1, mat, obj, T, extra, skipBottom = true) {
+  const P = (x, y, z) => T([x, y, z]);
+  const inside = P((x0 + x1) / 2, (y0 + y1) / 2, (z0 + z1) / 2);
+  quad([P(x0, y0, z1), P(x1, y0, z1), P(x1, y1, z1), P(x0, y1, z1)], mat, obj, inside, extra);
+  quad([P(x1, y0, z0), P(x1, y1, z0), P(x1, y1, z1), P(x1, y0, z1)], mat, obj, inside, extra);
+  quad([P(x0, y0, z0), P(x0, y1, z0), P(x0, y1, z1), P(x0, y0, z1)], mat, obj, inside, extra);
+  quad([P(x0, y1, z0), P(x1, y1, z0), P(x1, y1, z1), P(x0, y1, z1)], mat, obj, inside, extra);
+  quad([P(x0, y0, z0), P(x1, y0, z0), P(x1, y0, z1), P(x0, y0, z1)], mat, obj, inside, extra);
+  if (!skipBottom) quad([P(x0, y0, z0), P(x1, y0, z0), P(x1, y1, z0), P(x0, y1, z0)], mat, obj, inside, extra);
+}
+/* a square beam between two world points */
+function beam(a, b, t, mat, obj, extra) {
+  const d = norm(sub(b, a));
+  let s = norm(cross(d, Math.abs(d[2]) > .9 ? [1, 0, 0] : [0, 0, 1]));
+  const w = cross(d, s), L = Math.hypot(...sub(b, a));
+  const T = p => [a[0] + s[0] * p[0] + w[0] * p[1] + d[0] * p[2], a[1] + s[1] * p[0] + w[1] * p[1] + d[1] * p[2], a[2] + s[2] * p[0] + w[2] * p[1] + d[2] * p[2]];
+  box(-t, -t, 0, t, t, L, mat, obj, T, extra, false);
+}
+const ID = p => p;
+
+/* ---------- rasteriser ---------- */
+function project(p) {
+  return { x: OX + dot(p, RT) * S, y: OY - dot(p, UP) * S, d: dot(p, CAM) };
+}
+function rasterQuadScreen(q, qi) {
+  if (dot(q.n, CAM) <= 0.001) return;                 // back face
+  const P = q.p.map(project);
+  const UV = [[0, 0], [1, 0], [1, 1], [0, 1]];
+  tri(P[0], P[1], P[2], UV[0], UV[1], UV[2], q.p[0], q.p[1], q.p[2], qi, q.obj);
+  tri(P[0], P[2], P[3], UV[0], UV[2], UV[3], q.p[0], q.p[2], q.p[3], qi, q.obj);
+}
+function tri(a, b, c, ta, tb, tc, wa, wb, wc, qi, obj) {
+  const area = (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
+  if (Math.abs(area) < 1e-9) return;
+  const inv = 1 / area;
+  const x0 = Math.max(0, Math.floor(Math.min(a.x, b.x, c.x))), x1 = Math.min(W - 1, Math.ceil(Math.max(a.x, b.x, c.x)));
+  const y0 = Math.max(0, Math.floor(Math.min(a.y, b.y, c.y))), y1 = Math.min(H - 1, Math.ceil(Math.max(a.y, b.y, c.y)));
+  for (let iy = y0; iy <= y1; iy++) {
+    const py = iy + .5;
+    for (let ix = x0; ix <= x1; ix++) {
+      const px = ix + .5;
+      const w0 = ((b.x - px) * (c.y - py) - (b.y - py) * (c.x - px)) * inv;
+      if (w0 < -1e-6) continue;
+      const w1 = ((c.x - px) * (a.y - py) - (c.y - py) * (a.x - px)) * inv;
+      if (w1 < -1e-6) continue;
+      const w2 = 1 - w0 - w1;
+      if (w2 < -1e-6) continue;
+      const d = w0 * a.d + w1 * b.d + w2 * c.d, i = iy * W + ix;
+      if (d <= zb[i]) continue;
+      zb[i] = d; qb[i] = qi; ob[i] = obj;
+      ub[i] = w0 * ta[0] + w1 * tb[0] + w2 * tc[0];
+      vb[i] = w0 * ta[1] + w1 * tb[1] + w2 * tc[1];
+      wxb[i] = w0 * wa[0] + w1 * wb[0] + w2 * wc[0];
+      wyb[i] = w0 * wa[1] + w1 * wb[1] + w2 * wc[1];
+      wzb[i] = w0 * wa[2] + w1 * wb[2] + w2 * wc[2];
+    }
+  }
+}
+function rasterQuadShadow(q) {
+  const P = q.p.map(p => ({ x: (dot(p, LR) - smMinX) * smScale, y: (dot(p, LU) - smMinY) * smScale, d: dot(p, LIGHT) }));
+  stri(P[0], P[1], P[2]); stri(P[0], P[2], P[3]);
+}
+function stri(a, b, c) {
+  const area = (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
+  if (Math.abs(area) < 1e-9) return;
+  const inv = 1 / area;
+  const x0 = Math.max(0, Math.floor(Math.min(a.x, b.x, c.x))), x1 = Math.min(SM - 1, Math.ceil(Math.max(a.x, b.x, c.x)));
+  const y0 = Math.max(0, Math.floor(Math.min(a.y, b.y, c.y))), y1 = Math.min(SM - 1, Math.ceil(Math.max(a.y, b.y, c.y)));
+  for (let iy = y0; iy <= y1; iy++) for (let ix = x0; ix <= x1; ix++) {
+    const px = ix + .5, py = iy + .5;
+    const w0 = ((b.x - px) * (c.y - py) - (b.y - py) * (c.x - px)) * inv;
+    if (w0 < -1e-6) continue;
+    const w1 = ((c.x - px) * (a.y - py) - (c.y - py) * (a.x - px)) * inv;
+    if (w1 < -1e-6) continue;
+    const w2 = 1 - w0 - w1;
+    if (w2 < -1e-6) continue;
+    const d = w0 * a.d + w1 * b.d + w2 * c.d, i = iy * SM + ix;
+    if (d > smap[i]) smap[i] = d;
+  }
+}
+/* ---------- the harbour ---------- */
+const DOCK = { x0: -3.1, x1: -.62, y0: -4.6, y1: 4.6, top: .62 };
+const POSTS = [];
+for (const y of [-4.35, -1.45, 1.45, 4.35]) for (const x of [-2.9, -.82]) POSTS.push([x, y]);
+const PICKUP = [-1.85, 2.3];                        // where the crane picks crates up
+const QSLOTS = [[-1.86, -.15], [-1.86, -3.05]];     // the next two crates wait here
+const CRANE = [-2.2, 3.95];
+const LV = .72, MAXH = 3, FB = .75;
+
+/* cells are deck squares (x across the beam, y along the boat); h is height in layers */
+const TYPES = {
+  wood:    { cells: [[0, 0]],                 h: 1, m: 1, v: 1, kind: 'crate', colors: [[176, 120, 70], [170, 74, 58], [70, 104, 150]] },
+  long:    { cells: [[0, 0], [0, 1]],         h: 1, m: 2, v: 2, kind: 'crate', colors: [[176, 120, 70], [84, 128, 80]] },
+  big:     { cells: [[0, 0], [1, 0], [0, 1], [1, 1]], h: 1, m: 4, v: 6, kind: 'crate', brace: true, colors: [[206, 172, 112], [222, 214, 196], [220, 176, 70]] },
+  iron:    { cells: [[0, 0]],                 h: 1, m: 4, v: 3, kind: 'metal', colors: [[104, 124, 144], [176, 96, 60], [124, 124, 130]] },
+  tall:    { cells: [[0, 0]],                 h: 2, m: 2, v: 3, kind: 'cab',   colors: [[72, 128, 102], [62, 78, 128], [140, 62, 72]] },
+  fruit:   { cells: [[0, 0], [0, 1]],         h: 1, m: 1, v: 3, kind: 'fruit', colors: [[236, 128, 44], [214, 64, 56], [236, 206, 72]] },
+  lumber:  { cells: [[0, 0], [0, 1], [0, 2]], h: 1, m: 3, v: 4, kind: 'lumber', colors: [[204, 164, 106], [142, 98, 64]] },
+  machine: { cells: [[0, 0], [1, 0], [0, 1]], h: 1, m: 5, v: 8, kind: 'machine', colors: [[214, 170, 52], [62, 140, 140]] },
+  drum:    { cells: [[0, 0]],                 h: 1, m: 3, v: 2, kind: 'drum',  colors: [[190, 60, 52], [52, 96, 170], [64, 66, 74]] },
+  fridge:  { cells: [[0, 0], [1, 0]],         h: 2, m: 3, v: 6, kind: 'cab', fridge: true, colors: [[220, 226, 226], [150, 206, 188]] },
+  hay:     { cells: [[0, 0], [1, 0]],         h: 1, m: 1, v: 1, kind: 'hay',   colors: [[214, 184, 96]] },
+};
+const WEIGHTS = { wood: 3, long: 2, big: 1.1, iron: 1.8, tall: 1.4, fruit: 1.5, lumber: 1.2, machine: 1, drum: 1.5, fridge: .9, hay: 1.2 };
+const matCache = new Map();
+function matFor(t, ci) {
+  const key = t + ci;
+  let m = matCache.get(key);
+  if (!m) { const T = TYPES[t]; m = KIND[T.kind](T.colors[ci], T); matCache.set(key, m); }
+  return m;
+}
+const BOATS = [
+  { B: 3, L: 5, M0: 9,  kr: .34, kp: .13, paint: [58, 98, 122],  sea: 1,    tide: 0,  n: 10 },
+  { B: 2, L: 6, M0: 7,  kr: .5,  kp: .11, paint: [138, 74, 62],  sea: 1.2, tide: 80, n: 9 },
+  { B: 4, L: 4, M0: 13, kr: .27, kp: .16, paint: [70, 104, 76],  sea: 1.4,  tide: 60, n: 12 },
+];
+const SLIDE = 14 * Math.PI / 180, CAPSIZE = 24 * Math.PI / 180, PSLIDE = 10 * Math.PI / 180, PCAPSIZE = 18 * Math.PI / 180;
+const LAYER_MULT = [1, 1.5, 2], FULL_BONUS = 1.3;
+
+/* ---------- game state ---------- */
+let rngS = (Date.now() & 0xffff) + 1;
+const rnd = () => (rngS = (rngS * 16807) % 2147483647) / 2147483647;
+const G = { boatIdx: 0, score: 0, crates: 0, phase: 'arrive', t: 0, phaseT: 0, boat: null, queue: [], cur: null, onboard: [], falling: [], dockBack: [], parts: [], target: null, mouse: null, nextId: 100, log: [], lost: 0, tide: 0, seen: false };
+
+/* ---------- shapes ---------- */
+function rotCells(cells, k) {
+  let c = cells.map(p => p.slice());
+  for (let i = 0; i < k; i++) c = c.map(([x, y]) => [y, -x]);
+  const mx = Math.min(...c.map(p => p[0])), my = Math.min(...c.map(p => p[1]));
+  return c.map(([x, y]) => [x - mx, y - my]);
+}
+function shapeOf(c) {
+  const cells = rotCells(TYPES[c.t].cells, c.rot);
+  return { cells, w: Math.max(...cells.map(p => p[0])) + 1, l: Math.max(...cells.map(p => p[1])) + 1 };
+}
+/* split a cell set into rectangles (runs per row, merged downward) so each crate draws as few boxes as possible */
+function rectsOf(cells) {
+  const set = new Set(cells.map(([x, y]) => x + ',' + y)), used = new Set(), out = [];
+  const ys = [...new Set(cells.map(p => p[1]))].sort((a, b) => a - b);
+  for (const y of ys) {
+    const xs = cells.filter(p => p[1] === y).map(p => p[0]).sort((a, b) => a - b);
+    for (const x of xs) {
+      if (used.has(x + ',' + y)) continue;
+      let x1 = x; while (set.has((x1 + 1) + ',' + y) && !used.has((x1 + 1) + ',' + y)) x1++;
+      let y1 = y;
+      for (;;) {
+        let ok = true;
+        for (let xx = x; xx <= x1; xx++) if (!set.has(xx + ',' + (y1 + 1)) || used.has(xx + ',' + (y1 + 1))) ok = false;
+        if (!ok) break;
+        y1++;
+      }
+      for (let yy = y; yy <= y1; yy++) for (let xx = x; xx <= x1; xx++) used.add(xx + ',' + yy);
+      out.push([x, y, x1 + 1, y1 + 1]);
+    }
+  }
+  /* inset only on edges that face outside the shape */
+  return out.map(([x0, y0, x1, y1]) => {
+    const has = (x, y) => set.has(x + ',' + y);
+    const e = .06;
+    return [x0 + (has(x0 - 1, y0) ? 0 : e), y0 + (has(x0, y0 - 1) ? 0 : e), x1 - (has(x1, y0) ? 0 : e), y1 - (has(x0, y1) ? 0 : e)];
+  });
+}
+
+/* ---------- a day: three boats, each with a manifest shown once ---------- */
+function newManifest(n, B) {
+  const keys = Object.keys(WEIGHTS), tot = keys.reduce((s, k) => s + WEIGHTS[k], 0);
+  const list = [];
+  for (let k = 0; k < n; k++) {
+    let r = rnd() * tot, t = keys[0];
+    for (const key of keys) { r -= WEIGHTS[key]; if (r <= 0) { t = key; break; } }
+    list.push(t);
+  }
+  if (new Set(list).size < 4) list[0] = 'big', list[1] = 'machine', list[2] = 'tall';
+  return list;
+}
+function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+function startBoat() {
+  const spec = BOATS[G.boatIdx];
+  G.boat = { spec, B: spec.B, L: spec.L, x: DOCK.x1 + .22 + spec.B / 2, y: -17, z: 0, roll: 0, rollV: 0, pitch: 0, pitchV: 0, speed: 0, sinkDir: 1, eqR: 0, eqP: 0, sink: 0 };
+  const list = newManifest(spec.n, spec.B);
+  G.manifest = list;
+  G.queue = shuffle(list.map(t => ({ t, rot: 0, ci: Math.floor(rnd() * TYPES[t].colors.length) })));
+  G.onboard = []; G.cur = G.queue.shift(); G.phase = 'arrive'; G.phaseT = 0; G.target = null; G.fetch = false;
+  G.lost = 0; G.tide = spec.tide; G.seen = false; G.aim = COARSE ? [0, 0] : null;
+  showManifest();
+  updateHud();
+}
+function newDay() {
+  G.boatIdx = 0; G.score = 0; G.crates = 0; G.falling = []; G.dockBack = []; G.parts = []; G.log = [];
+  $('over').hidden = true;
+  startBoat();
+}
+
+/* ---------- boat transform ---------- */
+function boatT(b) {
+  const cr = Math.cos(b.roll), sr = Math.sin(b.roll), cp = Math.cos(b.pitch), sp = Math.sin(b.pitch);
+  return p => {
+    let y = p[1] * cp + p[2] * sp, z = -p[1] * sp + p[2] * cp, x = p[0];
+    const x2 = x * cr + z * sr; z = -x * sr + z * cr;
+    return [x2 + b.x, y + b.y, z + b.z];
+  };
+}
+function boatInv(b, w) {
+  const cr = Math.cos(b.roll), sr = Math.sin(b.roll), cp = Math.cos(b.pitch), sp = Math.sin(b.pitch);
+  let x = w[0] - b.x, y = w[1] - b.y, z = w[2] - b.z;
+  const x1 = x * cr - z * sr, z1 = x * sr + z * cr;
+  const y2 = y * cp - z1 * sp, z2 = y * sp + z1 * cp;
+  return [x1, y2, z2];
+}
+
+/* ---------- stacking ---------- */
+function heights() {
+  const b = G.boat, hg = [];
+  for (let i = 0; i < b.B; i++) { hg.push([]); for (let j = 0; j < b.L; j++) hg[i].push(0); }
+  for (const c of G.onboard) for (const [dx, dy] of c.cells) hg[c.col + dx][c.row + dy] = Math.max(hg[c.col + dx][c.row + dy], c.base + c.h);
+  return hg;
+}
+function check(col, row, sh, h, hg) {
+  const b = G.boat;
+  if (col < 0 || row < 0 || col + sh.w > b.B || row + sh.l > b.L) return null;
+  let base = -1, flat = true;
+  for (const [dx, dy] of sh.cells) { const v = hg[col + dx][row + dy]; if (base < 0) base = v; else if (v !== base) flat = false; }
+  return { col, row, sh, base, valid: flat && base + h <= MAXH, why: !flat ? 'notFlat' : base + h > MAXH ? 'tooHigh' : '' };
+}
+function anyFit() {
+  const hg = heights(), t = TYPES[G.cur.t];
+  for (let r = 0; r < 4; r++) {
+    const sh = shapeOf({ t: G.cur.t, rot: r });
+    for (let i = 0; i < G.boat.B; i++) for (let j = 0; j < G.boat.L; j++) { const c = check(i, j, sh, t.h, hg); if (c && c.valid) return true; }
+  }
+  return false;
+}
+/* screen pixel → deck cell, intersecting the tilted deck plane at the stack height (two passes) */
+function pickCell(sx, sy) {
+  const b = G.boat, sh = shapeOf(G.cur), t = TYPES[G.cur.t], hg = heights();
+  const a = (sx - OX) / S, bb = -(sy - OY) / S;
+  const Q0 = [a * RT[0] + bb * UP[0], a * RT[1] + bb * UP[1], a * RT[2] + bb * UP[2]];
+  const T = boatT(b);
+  let base = 0, res = null;
+  for (let pass = 0; pass < 2; pass++) {
+    const zl = FB + base * LV;
+    const P = T([0, 0, zl]), O = T([0, 0, zl + 1]), Nn = sub(O, P);
+    const den = -dot(CAM, Nn);
+    if (Math.abs(den) < 1e-6) return null;
+    const s = dot(sub(P, Q0), Nn) / den;
+    const X = [Q0[0] - s * CAM[0], Q0[1] - s * CAM[1], Q0[2] - s * CAM[2]];
+    const loc = boatInv(b, X);
+    if (Math.abs(loc[0]) > b.B / 2 + .9 || Math.abs(loc[1]) > b.L / 2 + .9) return null;
+    const col = clamp(Math.round(loc[0] + b.B / 2 - sh.w / 2), 0, b.B - sh.w), row = clamp(Math.round(loc[1] + b.L / 2 - sh.l / 2), 0, b.L - sh.l);
+    res = check(col, row, sh, t.h, hg);
+    if (!res) return null;
+    base = Math.min(res.base, MAXH);
+  }
+  return res;
+}
+
+/* ---------- physics ---------- */
+function equilibrium() {
+  const b = G.boat, spec = b.spec;
+  let M = spec.M0, mx = 0, my = 0, mz = 0, cargo = 0;
+  for (const c of G.onboard) {
+    if (c.drop > 0) continue;
+    const t = TYPES[c.t], m = t.m / c.cells.length, cz = (c.base + c.h / 2) * LV;
+    for (const [dx, dy] of c.cells) {
+      mx += m * (c.col + dx + .5 - b.B / 2); my += m * (c.row + dy + .5 - b.L / 2); mz += m * cz;
+    }
+    M += t.m; cargo += t.m;
+  }
+  const top = 1 + 1.25 * mz / M;
+  b.eqR = spec.kr * mx / M * top;
+  b.eqP = spec.kp * my / M * top;            // load toward the bow (+y) dips the bow (positive pitch)
+  b.sink = .016 * cargo;
+  return M;
+}
+function lowestDeck(b) {
+  const T = boatT(b);
+  let m = 9;
+  for (const x of [-b.B / 2, b.B / 2]) for (const y of [-b.L / 2, b.L / 2]) m = Math.min(m, T([x, y, FB])[2]);
+  return m;
+}
+function shares(a, b) {
+  for (const [ax, ay] of a.cells) for (const [bx, by] of b.cells) if (a.col + ax === b.col + bx && a.row + ay === b.row + by) return true;
+  return false;
+}
+function topCrates() {
+  return G.onboard.filter(c => c.drop <= 0 && !G.onboard.some(o => o !== c && o.base === c.base + c.h && shares(o, c)));
+}
+/* local boxes of a crate on the boat */
+function crateBoxes(c, b) {
+  const z0 = FB + c.base * LV + .01 + c.drop, z1 = FB + (c.base + c.h) * LV - .03 + c.drop;
+  return rectsOf(c.cells).map(([x0, y0, x1, y1]) => [c.col + x0 - b.B / 2, c.row + y0 - b.L / 2, z0, c.col + x1 - b.B / 2, c.row + y1 - b.L / 2, z1]);
+}
+function centre(c) {
+  let x = 0, y = 0;
+  for (const [dx, dy] of c.cells) { x += c.col + dx + .5; y += c.row + dy + .5; }
+  return [x / c.cells.length, y / c.cells.length];
+}
+function releaseCrate(c, dirX, dirY, kick, penalty) {
+  const b = G.boat, T = boatT(b), boxes = crateBoxes(c, b);
+  const [cx, cy] = centre(c), lc = [cx - b.B / 2, cy - b.L / 2, (boxes[0][2] + boxes[0][5]) / 2];
+  const ctr = T(lc);
+  const o = T([0, 0, 0]), d = sub(T([dirX, dirY, 0]), o);
+  G.onboard.splice(G.onboard.indexOf(c), 1);
+  /* keep the crate's boxes relative to its centre so it tumbles as one piece */
+  const rel = boxes.map(bx => [bx[0] - lc[0], bx[1] - lc[1], bx[2] - lc[2], bx[3] - lc[0], bx[4] - lc[1], bx[5] - lc[2]]);
+  const hh = (boxes[0][5] - boxes[0][2]) / 2;
+  G.falling.push({ c, rel, hh, penalty, x: ctr[0], y: ctr[1], z: ctr[2], vx: d[0] * kick, vy: d[1] * kick + (G.phase === 'leave' ? b.speed : 0), vz: 1.1, roll: b.roll, pitch: b.pitch, wr: dirX * 3.2, wp: dirY * 2.4 });
+}
+let slideCD = 0;
+function physics(dt) {
+  const b = G.boat, sea = b.spec.sea;
+  equilibrium();
+  const leaving = G.phase === 'leave';
+  const amp = (leaving ? .036 + Math.min(.024, b.speed * .008) : .012) * sea;
+  const beam = 3 / b.B;                       /* a wide hull rolls less in the same sea */
+  const wr = (amp * Math.sin(G.t * 1.9) + amp * .5 * Math.sin(G.t * 3.1 + 1)) * beam, wp = amp * .45 * Math.sin(G.t * 1.3 + 2);
+  const om = 2.7, ze = .22;
+  b.rollV += (-om * om * (b.roll - b.eqR - wr) - 2 * ze * om * b.rollV) * dt;
+  b.pitchV += (-om * om * 1.3 * (b.pitch - b.eqP - wp) - 2 * ze * om * b.pitchV) * dt;
+  b.roll += b.rollV * dt; b.pitch += b.pitchV * dt;
+  b.z = lerp(b.z, -b.sink + .035 * sea * Math.sin(G.t * 1.7), Math.min(1, dt * 4));
+  if (G.phase !== 'load' && G.phase !== 'leave') return;
+  if (Math.abs(b.roll) > CAPSIZE || Math.abs(b.pitch) > PCAPSIZE) return sinkBoat('capsized');
+  if (lowestDeck(b) < .015) return sinkBoat('swamped');
+  slideCD -= dt;
+  if (slideCD <= 0 && (Math.abs(b.roll) > SLIDE || Math.abs(b.pitch) > PSLIDE)) {
+    const byRoll = Math.abs(b.roll) / SLIDE >= Math.abs(b.pitch) / PSLIDE;
+    const sx = byRoll ? Math.sign(b.roll) : 0, sy = byRoll ? 0 : Math.sign(b.pitch);
+    const tops = topCrates();
+    if (tops.length) {
+      const score = c => { const [cx, cy] = centre(c); return cx * sx + cy * sy + c.base * .7; };
+      tops.sort((p, q) => score(q) - score(p));
+      releaseCrate(tops[0], sx, sy, 2.6, true);
+      sfx('slide');
+      slideCD = .45;
+    }
+  }
+}
+function sinkBoat(msg) {
+  const b = G.boat;
+  G.phase = 'sink'; G.phaseT = 0; b.sinkDir = Math.sign(b.roll || 1);
+  for (const c of G.onboard.slice()) releaseCrate(c, (rnd() - .5) * 2, (rnd() - .5) * 2, 1.4, false);
+  G.log.push({ idx: G.boatIdx, n: 0, value: 0, lost: G.lost, sunk: true });
+  toast(tx(msg), 2.6); sfx('splash'); sfx('splash');
+}
+/* what this boat would earn if it sailed now */
+function boatValue() {
+  const b = G.boat;
+  let v = 0;
+  for (const c of G.onboard) v += TYPES[c.t].v * LAYER_MULT[c.base];
+  const hg = heights();
+  let full = G.onboard.length > 0;
+  for (let i = 0; i < b.B; i++) for (let j = 0; j < b.L; j++) if (!hg[i][j]) full = false;
+  return { value: Math.round(v * (full ? FULL_BONUS : 1)), full };
+}
+
+/* ---------- quads for one frame ---------- */
+function buildScene(time) {
+  quads = [];
+  const tq = STILL ? 0 : Math.floor(time * 8) / 8;
+  box(DOCK.x0, DOCK.y0, DOCK.top - .26, DOCK.x1, DOCK.y1, DOCK.top, MAT.dock, 1, ID);
+  for (const [x, y] of POSTS) box(x - .13, y - .13, -.4, x + .13, y + .13, DOCK.top + .2, MAT.post, 2, ID);
+  for (const y of [-1.45, 1.45]) box(DOCK.x1 - .42, y - .14, DOCK.top, DOCK.x1 - .14, y + .14, DOCK.top + .22, MAT.iron, 3, ID);
+  /* crane: mast and slewing arm to the hook */
+  const mastTop = [CRANE[0], CRANE[1], 4.75];
+  box(CRANE[0] - .32, CRANE[1] - .32, DOCK.top, CRANE[0] + .32, CRANE[1] + .32, DOCK.top + .35, MAT.iron, 4, ID);
+  beam([CRANE[0], CRANE[1], DOCK.top + .3], mastTop, .14, MAT.crane, 4, { stripe: true });
+  const hook = G.hook || [PICKUP[0], PICKUP[1], 3];
+  const armEnd = [hook[0], hook[1], 4.6];
+  beam([mastTop[0], mastTop[1], 4.6], armEnd, .1, MAT.crane, 4);
+  beam([mastTop[0] - (armEnd[0] - mastTop[0]) * .25, mastTop[1] - (armEnd[1] - mastTop[1]) * .25, 4.62], [mastTop[0], mastTop[1], 4.62], .16, MAT.iron, 4);
+  G.ropeTop = armEnd;
+  /* the next crates wait on the dock, long side along the dock */
+  const drawLoose = (c, cx, cy, z, obj, T) => {
+    const sh = shapeOf(c);
+    for (const [x0, y0, x1, y1] of rectsOf(sh.cells))
+      box(cx - sh.w / 2 + x0, cy - sh.l / 2 + y0, z, cx - sh.w / 2 + x1, cy - sh.l / 2 + y1, z + TYPES[c.t].h * LV - .03, matFor(c.t, c.ci), obj, T || ID);
+  };
+  G.queue.slice(0, QSLOTS.length).forEach((c, k) => {
+    const sh = shapeOf(c), view = sh.w > sh.l ? { ...c, rot: (c.rot + 1) % 4 } : c;
+    drawLoose(view, QSLOTS[k][0], QSLOTS[k][1], DOCK.top, 10 + k);
+  });
+  for (const d of G.dockBack) drawLoose(d, d.x, d.y, DOCK.top, d.id);
+  /* the boat */
+  const b = G.boat;
+  if (b) {
+    const T = boatT(b), B = b.B, L = b.L, hw = B / 2, inset = .38, bot = -.5, bow = L / 2 + 1.05, bowB = L / 2 + .45, st = -L / 2 - .3;
+    const hm = hb(b), inside = T([0, 0, 0]), hz = { z0: bot, z1: FB };
+    /* hull plates are listed bottom edge first, so v runs from the keel (0) to the rail (1) */
+    quad([T([hw - inset, st, bot]), T([hw - inset, L / 2, bot]), T([hw, L / 2, FB]), T([hw, st, FB])], hm, 5, inside, hz);
+    quad([T([-hw + inset, st, bot]), T([-hw + inset, L / 2, bot]), T([-hw, L / 2, FB]), T([-hw, st, FB])], hm, 5, inside, hz);
+    quad([T([hw - inset, L / 2, bot]), T([0, bowB, bot]), T([0, bow, FB]), T([hw, L / 2, FB])], hm, 5, inside, hz);
+    quad([T([-hw + inset, L / 2, bot]), T([0, bowB, bot]), T([0, bow, FB]), T([-hw, L / 2, FB])], hm, 5, inside, hz);
+    quad([T([-hw + inset, st, bot]), T([hw - inset, st, bot]), T([hw, st, FB]), T([-hw, st, FB])], hm, 5, inside, hz);
+    quad([T([-hw, -L / 2, FB]), T([hw, -L / 2, FB]), T([hw, L / 2, FB]), T([-hw, L / 2, FB])], MAT.deck, 5, T([0, 0, -1]));
+    quad([T([-hw, L / 2, FB]), T([hw, L / 2, FB]), T([0, bow, FB]), T([0, bow, FB])], MAT.deck, 5, T([0, 0, -1]));
+    quad([T([-hw, st, FB]), T([hw, st, FB]), T([hw, -L / 2, FB]), T([-hw, -L / 2, FB])], MAT.deck, 5, T([0, 0, -1]));
+    box(-hw, st, FB, -hw + .09, L / 2, FB + .14, MAT.cream, 6, T);
+    box(hw - .09, st, FB, hw, L / 2, FB + .14, MAT.cream, 6, T);
+    box(-hw, st, FB, hw, st + .09, FB + .14, MAT.cream, 6, T);
+    /* flag pole on the stern, behind the cargo from this camera */
+    const my = st + .12, mb = T([0, my, FB]), mt = T([0, my, FB + 1.5]);
+    beam(mb, mt, .07, MAT.cream, 7);
+    const flap = STILL ? 0 : Math.round(Math.sin(tq * 6) * 2) / 10;
+    const f0 = T([0, my, FB + 1.48]), f1 = T([0, my, FB + 1.12]), f2 = T([.02, my - .7, FB + 1.18 + flap]), f3 = T([.02, my - .7, FB + 1.44 + flap]);
+    quad([f0, f1, f2, f3], MAT.flag, 8, T([1, my, FB + 1.3]));
+    quad([f0, f1, f2, f3], MAT.flag, 8, T([-1, my, FB + 1.3]));
+    /* target outline on the deck: one bar per outside edge of the footprint */
+    if (G.target && G.phase === 'load' && !G.fetch) {
+      const tg = G.target, zf = FB + tg.base * LV + .012, mat = tg.valid ? MAT.markOk : MAT.markBad, e = .1;
+      const set = new Set(tg.sh.cells.map(([x, y]) => x + ',' + y));
+      for (const [dx, dy] of tg.sh.cells) {
+        const x0 = tg.col + dx - B / 2 + .03, x1 = x0 + .94, y0 = tg.row + dy - L / 2 + .03, y1 = y0 + .94;
+        const bars = [];
+        if (!set.has(dx + ',' + (dy - 1))) bars.push([x0, y0, x1, y0 + e]);
+        if (!set.has(dx + ',' + (dy + 1))) bars.push([x0, y1 - e, x1, y1]);
+        if (!set.has((dx - 1) + ',' + dy)) bars.push([x0, y0, x0 + e, y1]);
+        if (!set.has((dx + 1) + ',' + dy)) bars.push([x1 - e, y0, x1, y1]);
+        for (const [a0, b0, a1, b1] of bars) quad([T([a0, b0, zf]), T([a1, b0, zf]), T([a1, b1, zf]), T([a0, b1, zf])], mat, 9, T([0, 0, -2]));
+      }
+    }
+    for (const c of G.onboard) for (const x of crateBoxes(c, b)) box(x[0], x[1], x[2], x[3], x[4], x[5], matFor(c.t, c.ci), c.id, T);
+  }
+  /* crane hook load */
+  if (G.cur && (G.phase === 'load' || G.phase === 'arrive' || G.phase === 'manifest')) {
+    const t = TYPES[G.cur.t], sh = shapeOf(G.cur);
+    let cx, cy, cz;
+    if (G.fetch || !G.target || G.phase !== 'load') { cx = PICKUP[0]; cy = PICKUP[1]; cz = DOCK.top + 1.25; }
+    else {
+      const T = boatT(b), tg = G.target;
+      const p = T([tg.col + sh.w / 2 - b.B / 2, tg.row + sh.l / 2 - b.L / 2, FB + tg.base * LV]);
+      cx = p[0]; cy = p[1]; cz = p[2] + 1.05 + (STILL ? 0 : Math.sin(time * 3) * .04);
+    }
+    G.hookGoal = [cx, cy, cz + t.h * LV];
+    const hk = G.hook || G.hookGoal;
+    if (!G.fetch) drawLoose(G.cur, hk[0], hk[1], hk[2] - t.h * LV, 99);
+  } else G.hookGoal = [PICKUP[0], PICKUP[1], 3.2];
+  /* falling crates tumble as one piece */
+  for (const f of G.falling) {
+    const cr = Math.cos(f.roll), sr = Math.sin(f.roll), cp = Math.cos(f.pitch), sp = Math.sin(f.pitch);
+    const T = p => { const y = p[1] * cp + p[2] * sp; let z = -p[1] * sp + p[2] * cp; const x = p[0] * cr + z * sr; z = -p[0] * sr + z * cr; return [x + f.x, y + f.y, z + f.z]; };
+    for (const r of f.rel) box(r[0], r[1], r[2], r[3], r[4], r[5], matFor(f.c.t, f.c.ci), f.c.id, T, null, false);
+  }
+}
+const hullCache = new Map();
+function hb(b) { let m = hullCache.get(b.spec); if (!m) { m = hullMat(b.spec.paint); hullCache.set(b.spec, m); } return m; }
+/* ---------- one frame ---------- */
+const WATER = [[30, 62, 98], [38, 86, 126], [50, 114, 148], [74, 146, 168], [128, 188, 198], [236, 244, 238]].map(c => rgb(...c));
+function render(time) {
+  buildScene(time);
+  const tq = STILL ? 0 : Math.floor(time * 8) / 8;
+  /* shadow pass */
+  smap.fill(-1e9);
+  for (const q of quads) rasterQuadShadow(q);
+  /* clear: water plane or paper */
+  for (let i = 0; i < N; i++) {
+    qb[i] = -1;
+    if (waterIn[i]) { zb[i] = waterD[i]; ob[i] = 0; } else { zb[i] = -1e9; ob[i] = -1; }
+  }
+  for (let k = 0; k < quads.length; k++) rasterQuadScreen(quads[k], k);
+  /* shade */
+  const b = G.boat;
+  const hw = b ? b.B / 2 - .12 : 0, L = b ? b.L : 0;
+  for (let iy = 0; iy < H; iy++) for (let ix = 0; ix < W; ix++) {
+    const i = iy * W + ix, qi = qb[i];
+    if (qi >= 0) {
+      const q = quads[qi];
+      let lit = q.nl > 0 ? q.nl : 0;
+      if (lit > 0 && shadowAt(wxb[i], wyb[i], wzb[i])) lit = 0;
+      const l = .3 + .7 * lit + .12 * (q.n[2] > 0 ? q.n[2] : 0);
+      pix[i] = q.mat(l, ub[i], vb[i], q, ix, iy);
+      continue;
+    }
+    if (!ob[i] && waterIn[i]) {
+      const x = waterX[i], y = waterY[i];
+      let lv = 1.9 + (waterN[i] - .5) * 1.5;
+      const w = Math.sin(x * 1.5 + y * .8 - tq * 1.7) + .6 * Math.sin(-x * .7 + y * 2.1 - tq * 1.1);
+      if (w > 1.2) lv += .9; else if (w < -1.05) lv -= .5;
+      if (waterIn[i] === 2) lv += .9;
+      if (shadowAt(x, y, 0)) lv -= 1.25;
+      let c = WATER[clamp(Math.floor(lv + (bay(ix, iy) - .5) * .5), 0, 4)];
+      if (w > 1.45 && hash(ix, iy >> 1) > .6) c = WATER[4];
+      /* foam at the hull's waterline, around the posts, and the wake when under way */
+      if (b) {
+        const lx = x - b.x, ly = y - b.y, bowStart = L / 2;
+        let half = hw;
+        if (ly > bowStart) half = hw * Math.max(0, 1 - (ly - bowStart) / .85);
+        const inLen = ly > -L / 2 - .5 && ly < L / 2 + .95;
+        const out = Math.abs(lx) - half;
+        if (inLen && out > -.05 && out < .2 + .08 * Math.sin(y * 3 + tq * 4) && bay(ix, iy) < .6) c = WATER[5];
+        if (b.speed > .2 && ly < -L / 2 - .3 && ly > -L / 2 - 6) {
+          const dd = -L / 2 - .3 - ly, edge = Math.abs(Math.abs(lx) - (half + dd * .32));
+          if (edge < .2 && bay(ix, iy) < Math.min(1, b.speed / 3) * (1 - dd / 6)) c = WATER[5];
+        }
+      }
+      for (const [px, py] of POSTS) { const d = Math.hypot(x - px, y - py); if (d < .3 && d > .12 && bay(ix, iy) < .5) c = WATER[5]; }
+      pix[i] = c;
+      continue;
+    }
+    pix[i] = BGC;
+  }
+  /* outlines from object ids + depth: dark against water and paper, warm rim on upper-left overlaps */
+  const NB = [-W, -1, W, 1];
+  for (let iy = 1; iy < H - 1; iy++) for (let ix = 1; ix < W - 1; ix++) {
+    const i = iy * W + ix, o = ob[i];
+    if (o <= 0) continue;
+    const d = zb[i];
+    let water = false, rim = false, low = false;
+    for (let k = 0; k < 4; k++) {
+      const j = i + NB[k];
+      if (ob[j] === o || zb[j] > d - .12) continue;
+      if (ob[j] <= 0) water = true; else if (k < 2) rim = true; else low = true;
+    }
+    const p = pix[i], r = p & 255, g = p >> 8 & 255, bl = p >> 16 & 255;
+    if (water) pix[i] = rgb(r * .5, g * .48, bl * .62);
+    else if (rim) pix[i] = rgb(lerp(r, 255, .28), lerp(g, 236, .28), lerp(bl, 190, .2));
+    else if (low) pix[i] = rgb(r * .74, g * .72, bl * .82);
+  }
+  /* crane rope: a 1px line with depth test */
+  if (G.ropeTop && G.hook) {
+    const a = G.ropeTop, h = G.hook, ink = rgb(40, 38, 46);
+    const pa = project(a), ph = project(h), n = Math.ceil(Math.hypot(pa.x - ph.x, pa.y - ph.y)) + 1;
+    for (let k = 0; k <= n; k++) {
+      const t = k / n, x = Math.floor(lerp(pa.x, ph.x, t)), y = Math.floor(lerp(pa.y, ph.y, t)), d = lerp(pa.d, ph.d, t);
+      if (x < 0 || y < 0 || x >= W || y >= H) continue;
+      const i = y * W + x;
+      if (d >= zb[i] - .05) pix[i] = ink;
+    }
+  }
+  /* particles */
+  for (const p of G.parts) {
+    const s = project([p.x, p.y, p.z]), x = Math.floor(s.x), y = Math.floor(s.y);
+    if (x < 0 || y < 0 || x >= W || y >= H) continue;
+    const i = y * W + x;
+    if (s.d < zb[i] - .05) continue;
+    /* R x R blocks, so particles keep their size at 2x */
+    const w = p.big ? 2 * R : R;
+    for (let yy = y; yy < Math.min(H, y + R); yy++) for (let xx = x; xx < Math.min(W, x + w); xx++) pix[yy * W + xx] = p.c;
+  }
+  ctx.putImageData(img, 0, 0);
+}
+/* ---------- sound (synthesised, starts on first interaction) ---------- */
+let ac = null, muted = false;
+function audio() { if (!ac) { try { ac = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) { ac = null; } } return ac; }
+function noiseBuf(a, len) { const b = a.createBuffer(1, a.sampleRate * len, a.sampleRate), d = b.getChannelData(0); for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1; return b; }
+function sfx(kind, mass = 1) {
+  if (muted) return;
+  const a = audio(); if (!a) return;
+  const t = a.currentTime, g = a.createGain(); g.connect(a.destination);
+  if (kind === 'thunk') {
+    const o = a.createOscillator(); o.type = 'sine'; o.frequency.setValueAtTime(150 - mass * 14, t); o.frequency.exponentialRampToValueAtTime(55, t + .16);
+    g.gain.setValueAtTime(.32, t); g.gain.exponentialRampToValueAtTime(.001, t + .22); o.connect(g); o.start(t); o.stop(t + .25);
+    const n = a.createBufferSource(); n.buffer = noiseBuf(a, .08); const f = a.createBiquadFilter(); f.type = 'lowpass'; f.frequency.value = 900;
+    const g2 = a.createGain(); g2.gain.setValueAtTime(.14, t); g2.gain.exponentialRampToValueAtTime(.001, t + .08); n.connect(f); f.connect(g2); g2.connect(a.destination); n.start(t);
+  } else if (kind === 'splash' || kind === 'slide') {
+    const n = a.createBufferSource(); n.buffer = noiseBuf(a, .6); const f = a.createBiquadFilter(); f.type = 'bandpass';
+    f.frequency.setValueAtTime(kind === 'slide' ? 500 : 1400, t); f.frequency.exponentialRampToValueAtTime(kind === 'slide' ? 260 : 380, t + .5);
+    g.gain.setValueAtTime(kind === 'slide' ? .12 : .3, t); g.gain.exponentialRampToValueAtTime(.001, t + .55); n.connect(f); f.connect(g); n.start(t);
+  } else if (kind === 'horn') {
+    for (const fr of [110, 165]) { const o = a.createOscillator(); o.type = 'sawtooth'; o.frequency.value = fr; const f = a.createBiquadFilter(); f.type = 'lowpass'; f.frequency.value = 520; o.connect(f); f.connect(g); o.start(t); o.stop(t + 1.1); }
+    g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(.09, t + .08); g.gain.setValueAtTime(.09, t + .85); g.gain.linearRampToValueAtTime(0, t + 1.1);
+  } else if (kind === 'coin') {
+    const o = a.createOscillator(); o.type = 'square'; o.frequency.setValueAtTime(880, t); o.frequency.setValueAtTime(1320, t + .08);
+    g.gain.setValueAtTime(.06, t); g.gain.exponentialRampToValueAtTime(.001, t + .3); o.connect(g); o.start(t); o.stop(t + .3);
+  }
+}
+/* ---------- HUD ---------- */
+const $ = id => document.getElementById(id);
+const COARSE = matchMedia('(pointer: coarse)').matches;
+let toastT = 0;
+function toast(msg, sec = 1.6) { $('toast').textContent = msg; $('toast').dataset.show = '1'; toastT = sec; }
+const hudCache = {};
+function setText(id, s) { if (hudCache[id] !== s) { hudCache[id] = s; $(id).textContent = s; } }
+/* a small pixel icon of a crate: its footprint seen from above, extruded by its height */
+function crateIcon(t, ci, rot = 0, zoom = 3) {
+  const T = TYPES[t], sh = shapeOf({ t, rot }), cell = 7, dz = 3 * T.h;
+  const cv = document.createElement('canvas');
+  cv.width = sh.w * cell + 2; cv.height = sh.l * cell + dz + 2;
+  const x = cv.getContext('2d');
+  const base = T.kind === 'fruit' ? T.colors[ci] : T.colors[ci];
+  const col = (k, a = 1) => `rgb(${base.map(v => Math.round(Math.min(255, v * k))).join(',')})`;
+  const set = new Set(sh.cells.map(([a, b]) => a + ',' + b));
+  /* rows are drawn far (high y) at the top of the icon, like the deck seen from the dock */
+  const px = (cx, cy) => [1 + cx * cell, 1 + (sh.l - 1 - cy) * cell];
+  x.fillStyle = '#1d2a33';
+  for (const [cx, cy] of sh.cells) { const [a, b] = px(cx, cy); x.fillRect(a - 1, b - 1, cell + 2, cell + dz + 2); }
+  for (const [cx, cy] of sh.cells) { const [a, b] = px(cx, cy); x.fillStyle = col(.62); x.fillRect(a, b + 1, cell, cell + dz - 1); }
+  for (const [cx, cy] of sh.cells) {
+    const [a, b] = px(cx, cy);
+    x.fillStyle = col(1); x.fillRect(a, b, cell, cell);
+    x.fillStyle = col(1.18);
+    if (!set.has(cx + ',' + (cy + 1))) x.fillRect(a, b, cell, 1);
+    if (!set.has((cx - 1) + ',' + cy)) x.fillRect(a, b, 1, cell);
+  }
+  cv.className = 'icon';
+  cv.style.width = cv.width * zoom + 'px'; cv.style.height = cv.height * zoom + 'px';
+  return cv;
+}
+function showManifest() {
+  const spec = G.boat.spec, counts = {};
+  for (const t of G.manifest) counts[t] = (counts[t] || 0) + 1;
+  const card = $('overCard');
+  card.innerHTML = '';
+  const h = document.createElement('h2'); h.textContent = tx('manifestTitle', { i: G.boatIdx + 1, name: boatName(G.boatIdx) }); card.append(h);
+  const lead = document.createElement('p'); lead.textContent = tx('manifest'); card.append(lead);
+  const tb = document.createElement('table'); tb.className = 'manifest';
+  tb.innerHTML = `<thead><tr><th></th><th>${tx('colCargo')}</th><th>${tx('colWeight')}</th><th class="num">${tx('colQty')}</th></tr></thead>`;
+  const body = document.createElement('tbody');
+  let total = 0;
+  Object.entries(counts).sort((a, b) => TYPES[b[0]].m - TYPES[a[0]].m || b[1] - a[1]).forEach(([type, n]) => {
+    const T = TYPES[type]; total += T.m * n;
+    const tr = document.createElement('tr');
+    const ic = document.createElement('td'); ic.className = 'ic'; ic.append(crateIcon(type, 0, 0, iconZoom(2))); tr.append(ic);
+    const nm = document.createElement('td'); nm.textContent = cargoName(type) + (T.h > 1 ? tx('tall') : ''); tr.append(nm);
+    const wt = document.createElement('td');
+    const bar = document.createElement('span'); bar.className = 'wbar';
+    for (let k = 0; k < 5; k++) { const i = document.createElement('i'); if (k >= T.m) i.className = 'off'; bar.append(i); }
+    wt.append(bar, document.createTextNode(tx('tons', { n: T.m }))); tr.append(wt);
+    const num = document.createElement('td'); num.className = 'num'; num.textContent = '×' + n; tr.append(num);
+    body.append(tr);
+  });
+  tb.append(body); card.append(tb);
+  const sum = document.createElement('p'); sum.textContent = tx('sum', { n: G.manifest.length, w: total }); card.append(sum);
+  const warn = document.createElement('p'); warn.className = 'warn'; warn.textContent = tx('once'); card.append(warn);
+  const btn = document.createElement('button'); btn.className = 'primary'; btn.type = 'button'; btn.id = 'go'; btn.textContent = tx('start');
+  btn.addEventListener('click', closeManifest);
+  card.append(btn);
+  $('over').hidden = false;
+  btn.focus({ preventScroll: true });
+}
+function closeManifest() {
+  if (G.seen) return;
+  if (COARSE && !touchHintShown) { touchHintShown = true; setTimeout(() => toast(tx('touchHint'), 3.2), 400); }
+  G.seen = true; $('over').hidden = true; audio();
+  if (G.phase === 'manifest') { G.phase = 'load'; G.phaseT = 0; retarget(); }
+  canvas.focus({ preventScroll: true });
+}
+let iconKey = '';
+function updateHud() {
+  const b = G.boat;
+  setText('hBoat', tx('boatOf', { i: Math.min(G.boatIdx + 1, BOATS.length), n: BOATS.length }));
+  setText('hBoatName', b ? boatName(G.boatIdx) : '');
+  setText('hScore', String(G.score));
+  const active = b && (G.phase === 'load' || G.phase === 'leave');
+  const est = active ? boatValue() : null;
+  setText('hBoatVal', est ? String(est.value) + (est.full ? ' ' + tx('full') : '') : '0');
+  const tideOn = b && b.spec.tide > 0;
+  $('cTide').hidden = !tideOn;
+  if (tideOn) { const s = Math.max(0, Math.ceil(G.tide)); setText('hTide', tx('seconds', { s })); $('cTide').classList.toggle('warn', s <= 10 && G.phase === 'load'); }
+  const k = G.cur ? `${G.cur.t}|${G.cur.ci}|${G.cur.rot}` : '';
+  if (k !== iconKey) {
+    iconKey = k;
+    const slot = $('cIcon'); slot.innerHTML = '';
+    if (G.cur) slot.append(crateIcon(G.cur.t, G.cur.ci, G.cur.rot, iconZoom(3)));
+  }
+  setText('cName', G.cur ? cargoName(G.cur.t) : '');
+  setText('cSub', G.cur ? tx('more', { n: G.queue.length }) : '');
+  if (b) {
+    const deg = v => (v * 180 / Math.PI);
+    const r = deg(b.roll), p = deg(b.pitch);
+    $('nRoll').style.left = clamp(50 + r / 30 * 50, 0, 100) + '%';
+    $('nPitch').style.left = clamp(50 + p / 22 * 50, 0, 100) + '%';
+    setText('vRoll', `${Math.abs(r).toFixed(0)}°`);
+    setText('vPitch', `${Math.abs(p).toFixed(0)}°`);
+    $('gRoll').classList.toggle('warn', Math.abs(b.roll) > SLIDE * .75);
+    $('gPitch').classList.toggle('warn', Math.abs(b.pitch) > PSLIDE * .75);
+    const fb = Math.max(0, lowestDeck(b));
+    $('fDraft').style.width = clamp(fb / FB * 100, 0, 100) + '%';
+    setText('vDraft', `${Math.round(fb * 100)}cm`);
+    $('gDraft').classList.toggle('warn', fb < .2);
+  } else {
+    $('nRoll').style.left = $('nPitch').style.left = '50%';
+    setText('vRoll', '0°'); setText('vPitch', '0°'); setText('vDraft', '—');
+    $('fDraft').style.width = '0%';
+    for (const id of ['gRoll', 'gPitch', 'gDraft']) $(id).classList.remove('warn');
+  }
+  const loading = G.phase === 'load';
+  $('bGo').disabled = !loading;
+}
+/* text and icons snap to whole device pixels of the 12px font grid */
+function snapPx(css) { const d = window.devicePixelRatio || 1; return Math.max(1, Math.round(css * d / 12)) * 12 / d; }
+function iconZoom(z) { const d = window.devicePixelRatio || 1; return Math.max(1, Math.round(z * d)) / d; }
+function setType() {
+  const r = document.documentElement.style;
+  r.setProperty('--t0', snapPx(13) + 'px'); r.setProperty('--t1', snapPx(16) + 'px'); r.setProperty('--t2', snapPx(26) + 'px');
+}
+setType();
+addEventListener('resize', setType);
+document.querySelectorAll('#gRoll .zone').forEach(z => z.style.width = (50 - 14 / 30 * 50) + '%');
+document.querySelectorAll('#gPitch .zone').forEach(z => z.style.width = (50 - 10 / 22 * 50) + '%');
+
+/* ---------- actions ---------- */
+function place() {
+  if (G.phase !== 'load' || !G.cur || G.fetch || !G.target || !G.target.valid) {
+    if (G.target && !G.target.valid && G.phase === 'load') toast(tx(G.target.why || 'noRoom'));
+    return;
+  }
+  const t = TYPES[G.cur.t], tg = G.target;
+  G.onboard.push({ id: G.nextId++, t: G.cur.t, ci: G.cur.ci, rot: G.cur.rot, cells: tg.sh.cells, col: tg.col, row: tg.row, h: t.h, base: tg.base, drop: 1.05, vz: 0 });
+  G.fetch = true;
+  nextCrate();
+}
+function nextCrate() {
+  G.cur = G.queue.shift() || null;
+  G.target = null;
+  if (G.mouse) retarget();
+  updateHud();
+}
+function rotate() {
+  if (!G.cur || G.phase !== 'load') return;
+  G.cur.rot = (G.cur.rot + 1) % 4;
+  if (G.mouse || G.aim) retarget(); else if (G.target) moveKey(0, 0);
+  updateHud();
+}
+function depart(forced) {
+  if (G.phase !== 'load') return;
+  if (G.onboard.some(c => c.drop > 0)) { G.departSoon = true; return; }
+  G.phase = 'leave'; G.phaseT = 0; G.target = null; G.departSoon = false; sfx('horn');
+}
+function retarget() {
+  if (G.phase !== 'load' || !G.cur) { if (G.mouse) G.target = null; return; }
+  if (G.mouse) G.target = pickCell(G.mouse[0], G.mouse[1]);
+  else if (G.aim) aimTarget();
+}
+/* touch aims with a virtual cursor in deck coordinates (cells from the deck centre), moved by dragging anywhere */
+function aimTarget() {
+  const b = G.boat, sh = shapeOf(G.cur), t = TYPES[G.cur.t];
+  G.aim[0] = clamp(G.aim[0], -b.B / 2, b.B / 2); G.aim[1] = clamp(G.aim[1], -b.L / 2, b.L / 2);
+  const col = clamp(Math.round(G.aim[0] + b.B / 2 - sh.w / 2), 0, b.B - sh.w), row = clamp(Math.round(G.aim[1] + b.L / 2 - sh.l / 2), 0, b.L - sh.l);
+  G.target = check(col, row, sh, t.h, heights());
+}
+function moveKey(dx, dy) {
+  if (G.phase !== 'load' || !G.cur) return;
+  const sh = shapeOf(G.cur), t = TYPES[G.cur.t], hg = heights(), b = G.boat;
+  let col = G.target ? G.target.col : Math.floor((b.B - sh.w) / 2), row = G.target ? G.target.row : Math.floor((b.L - sh.l) / 2);
+  col = clamp(col + dx, 0, b.B - sh.w); row = clamp(row + dy, 0, b.L - sh.l);
+  G.mouse = null;
+  G.target = check(col, row, sh, t.h, hg);
+  if (G.target) G.aim = [col + sh.w / 2 - b.B / 2, row + sh.l / 2 - b.L / 2];
+}
+
+/* ---------- input ---------- */
+function toCanvas(e) { const r = canvas.getBoundingClientRect(); return [(e.clientX - r.left) / r.width * W, (e.clientY - r.top) / r.height * H]; }
+canvas.addEventListener('pointermove', e => { if (e.pointerType !== 'mouse') return; G.mouse = toCanvas(e); retarget(); });
+canvas.addEventListener('pointerdown', e => {
+  if (e.pointerType !== 'mouse') return;
+  audio(); if (ac && ac.state === 'suspended') ac.resume();
+  if (e.button === 2) { rotate(); return; }
+  G.mouse = toCanvas(e); retarget();
+});
+canvas.addEventListener('pointerup', e => { if (e.pointerType !== 'mouse' || e.button === 2) return; G.mouse = toCanvas(e); retarget(); place(); });
+/* touch and pen: drag anywhere on the page (not on buttons or cards) to move the crane, tap to drop.
+   The finger never has to cover the boat. */
+let drag = null, touchHintShown = false;
+document.addEventListener('pointerdown', e => {
+  if (e.pointerType === 'mouse' || drag) return;
+  if (e.target.closest('button, .tip, #over')) return;
+  audio(); if (ac && ac.state === 'suspended') ac.resume();
+  if (G.phase !== 'load' || !G.cur) return;
+  if (!G.aim) G.aim = [0, 0];
+  G.mouse = null;
+  drag = { id: e.pointerId, x: e.clientX, y: e.clientY, t: performance.now(), aim: G.aim.slice(), moved: false };
+  e.preventDefault();
+});
+document.addEventListener('pointermove', e => {
+  if (!drag || e.pointerId !== drag.id || G.phase !== 'load' || !G.cur) return;
+  const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+  if (!drag.moved && Math.hypot(dx, dy) < 8) return;
+  drag.moved = true;
+  /* screen drag → ground-plane drag (inverse of the camera), with a little gain so short swipes cross the deck */
+  const k = 1.6 / (S * cssScale), a = dx * k, bb = -dy * k / SP;
+  G.aim = [drag.aim[0] + (a - bb) * R2, drag.aim[1] + (-a - bb) * R2];
+  aimTarget();
+});
+const endDrag = e => {
+  if (!drag || e.pointerId !== drag.id) return;
+  const tap = !drag.moved && performance.now() - drag.t < 350;
+  drag = null;
+  if (tap && e.type === 'pointerup') place();
+};
+document.addEventListener('pointerup', endDrag);
+document.addEventListener('pointercancel', endDrag);
+$('bRot').addEventListener('click', () => { audio(); rotate(); });
+canvas.addEventListener('pointerleave', e => { if (e.pointerType === 'mouse') { G.mouse = null; G.target = null; } });
+canvas.addEventListener('contextmenu', e => e.preventDefault());
+canvas.addEventListener('wheel', e => { e.preventDefault(); rotate(); }, { passive: false });
+addEventListener('keydown', e => {
+  if (e.target instanceof HTMLButtonElement && (e.key === ' ' || e.key === 'Enter')) return;
+  const k = e.key;
+  if (!$('over').hidden) { if ((k === 'Enter' || k === ' ') && G.phase !== 'end') { closeManifest(); e.preventDefault(); } return; }
+  if (k === 'r' || k === 'R') rotate();
+  else if (k === 'ArrowLeft') moveKey(-1, 0); else if (k === 'ArrowRight') moveKey(1, 0);
+  else if (k === 'ArrowUp') moveKey(0, 1); else if (k === 'ArrowDown') moveKey(0, -1);
+  else if (k === ' ') place();
+  else if (k === 'Enter') depart();
+  else return;
+  e.preventDefault();
+});
+$('bGo').addEventListener('click', () => { audio(); depart(); });
+/* rules card: hover or focus on desktop, a tap toggles it on touch */
+$('bRules').addEventListener('click', e => { const t = $('tip'); t.dataset.open = t.dataset.open === '1' ? '0' : '1'; e.stopPropagation(); });
+addEventListener('pointerdown', e => { if (!$('tip').contains(e.target)) $('tip').dataset.open = '0'; });
+$('mute').addEventListener('click', () => { muted = !muted; $('mute').textContent = tx(muted ? 'soundOff' : 'soundOn'); $('mute').setAttribute('aria-pressed', String(muted)); });
+$('mute').textContent = tx('soundOn');
+if ($('lang')) $('lang').addEventListener('click', () => setLang(LANG === 'zh' ? 'en' : 'zh'));
+/* a language switch redraws everything the game wrote itself */
+function onLangChange() {
+  for (const k in hudCache) delete hudCache[k];
+  iconKey = '';
+  $('mute').textContent = tx(muted ? 'soundOff' : 'soundOn');
+  if (!$('over').hidden) { if (G.phase === 'end') renderEnd(); else if (G.boat && !G.seen) showManifest(); }
+  updateHud();
+}
+
+let cssScale = 1;
+function fit() {
+  const st = $('stage').getBoundingClientRect(), dpr = window.devicePixelRatio || 1;
+  /* at most 2 CSS px per 1x game pixel: bigger stops looking like a small model */
+  const k = Math.max(1, Math.min(Math.round(2 * dpr / R), Math.floor(Math.min(st.width * dpr / W, st.height * dpr / H))));
+  const scale = k / dpr;
+  cssScale = scale;
+  canvas.style.width = W * scale + 'px'; canvas.style.height = H * scale + 'px';
+}
+addEventListener('resize', fit);
+
+/* ---------- update ---------- */
+function splash(x, y, n, big) {
+  for (let k = 0; k < n; k++) {
+    const a = rnd() * 6.283, s = .8 + rnd() * 2.2;
+    G.parts.push({ x, y, z: .05, vx: Math.cos(a) * s * .5, vy: Math.sin(a) * s * .5, vz: 2 + rnd() * 2.5, life: .6 + rnd() * .5, c: rnd() < .5 ? WATER[5] : WATER[4], big: big && rnd() < .4, g: 9 });
+  }
+}
+function dust(p, n) {
+  for (let k = 0; k < n; k++) {
+    const a = rnd() * 6.283, s = .6 + rnd();
+    G.parts.push({ x: p[0], y: p[1], z: p[2] + .05, vx: Math.cos(a) * s, vy: Math.sin(a) * s, vz: .4 + rnd() * .6, life: .3 + rnd() * .2, c: rgb(214, 196, 160), g: 3 });
+  }
+}
+function update(dt) {
+  G.t += dt; G.phaseT += dt;
+  const b = G.boat;
+  if (toastT > 0 && (toastT -= dt) <= 0) $('toast').dataset.show = '0';
+  if (G.hookGoal) {
+    if (!G.hook) G.hook = G.hookGoal.slice();
+    const k = Math.min(1, dt * 9);
+    for (let i = 0; i < 3; i++) G.hook[i] = lerp(G.hook[i], G.hookGoal[i], k);
+    if (G.fetch && Math.hypot(G.hook[0] - G.hookGoal[0], G.hook[1] - G.hookGoal[1], G.hook[2] - G.hookGoal[2]) < .35) { G.fetch = false; retarget(); }
+  }
+  if (G.phase === 'arrive') {
+    const t = Math.min(1, G.phaseT / 2.4), e = 1 - Math.pow(1 - t, 3);
+    b.y = lerp(-17, 0, e); b.speed = (1 - t) * 3;
+    if (t >= 1) { b.speed = 0; G.phase = G.seen ? 'load' : 'manifest'; G.phaseT = 0; retarget(); }
+  }
+  if (G.phase === 'load' && b.spec.tide > 0) {
+    G.tide -= dt;
+    if (G.tide <= 0) depart(true);
+  }
+  if (G.departSoon && G.phase === 'load') depart(G.tide <= 0 && b.spec.tide > 0);
+  for (const c of G.onboard) if (c.drop > 0) {
+    c.vz -= 14 * dt; c.drop += c.vz * dt;
+    if (c.drop <= 0) {
+      c.drop = 0;
+      const t = TYPES[c.t];
+      const M = b.spec.M0 + G.onboard.reduce((s, o) => s + TYPES[o.t].m, 0);
+      const [cx, cy] = centre(c);
+      b.rollV += .9 * t.m * (cx - b.B / 2) / M;
+      b.pitchV += .6 * t.m * (cy - b.L / 2) / M;
+      dust(boatT(b)([cx - b.B / 2, cy - b.L / 2, FB + c.base * LV]), 5);
+      sfx('thunk', t.m);
+    }
+  }
+  if (b && G.phase !== 'sink') physics(dt);
+  if (G.phase === 'leave') {
+    b.speed = Math.min(3.2, b.speed + dt * 1.1);
+    b.y += b.speed * dt;
+    if (b.y > 9.5) {
+      const { value, full } = boatValue();
+      G.score += value; G.crates += G.onboard.length;
+      G.log.push({ idx: G.boatIdx, n: G.onboard.length, value, full, lost: G.lost });
+      if (value) toast(tx('paid', { v: value }) + (full ? '  ' + tx('full') : ''), 2.2);
+      if (value) sfx('coin');
+      nextBoat();
+    }
+  }
+  if (G.phase === 'sink') {
+    b.roll = lerp(b.roll, b.sinkDir * 1.25, Math.min(1, dt * 1.6)); b.rollV = 0;
+    b.z -= dt * .5;
+    if (G.phaseT > 2.6) nextBoat();
+  }
+  for (const f of G.falling.slice()) {
+    f.vz -= 9.5 * dt; f.x += f.vx * dt; f.y += f.vy * dt; f.z += f.vz * dt; f.roll += f.wr * dt; f.pitch += f.wp * dt;
+    const onDock = f.x > DOCK.x0 && f.x < DOCK.x1 && f.y > DOCK.y0 && f.y < DOCK.y1;
+    if (onDock && f.z - f.hh <= DOCK.top && f.vz < 0 && f.penalty) {
+      G.falling.splice(G.falling.indexOf(f), 1);
+      G.dockBack.push({ t: f.c.t, ci: f.c.ci, rot: f.c.rot, x: clamp(f.x, DOCK.x0 + .7, DOCK.x1 - .7), y: f.y, id: f.c.id, life: .9 });
+      sfx('thunk', 2);
+    } else if (f.z < -.7) {
+      G.falling.splice(G.falling.indexOf(f), 1);
+      splash(f.x, f.y, 16, true); sfx('splash');
+    } else if (f.z < .1 && !f.splashed) {
+      f.splashed = true; splash(f.x, f.y, 10, true); f.vx *= .3; f.vy *= .3; f.vz *= .3; f.wr *= .3; f.wp *= .3;
+      if (f.penalty) { const v = TYPES[f.c.t].v; G.score -= v; G.lost += v; toast(tx('lost', { v })); }
+    }
+  }
+  for (const d of G.dockBack.slice()) if ((d.life -= dt) <= 0) {
+    G.dockBack.splice(G.dockBack.indexOf(d), 1);
+    if (G.phase === 'load' || G.phase === 'arrive' || G.phase === 'manifest') { if (G.cur) G.queue.unshift(G.cur); G.cur = { t: d.t, ci: d.ci, rot: 0 }; retarget(); }
+  }
+  for (const p of G.parts.slice()) {
+    p.vz -= p.g * dt; p.x += p.vx * dt; p.y += p.vy * dt; p.z += p.vz * dt; p.life -= dt;
+    if (p.life <= 0 || p.z < -.05) G.parts.splice(G.parts.indexOf(p), 1);
+  }
+  updateHud();
+}
+function nextBoat() {
+  G.boatIdx++;
+  G.falling = G.falling.filter(f => f.z > -.7);
+  if (G.boatIdx >= BOATS.length) return endDay();
+  startBoat();
+}
+function endDay() {
+  G.phase = 'end'; G.boat = null; G.cur = null; G.queue = [];
+  updateHud();
+  let best = 0;
+  try { best = +(localStorage.getItem('dock-best-v2') || 0); if (G.score > best) localStorage.setItem('dock-best-v2', String(G.score)); } catch (e) { best = 0; }
+  G.prevBest = best;
+  renderEnd();
+}
+function renderEnd() {
+  const best = G.prevBest, card = $('overCard');
+  card.innerHTML = '';
+  const h = document.createElement('h2'); h.textContent = tx('dayDone'); card.append(h);
+  const ul = document.createElement('ul'); ul.className = 'ledger';
+  G.log.forEach((r, i) => {
+    const li = document.createElement('li');
+    const a = document.createElement('span'); a.textContent = `${i + 1} ${boatName(r.idx)}`;
+    const m = document.createElement('span'); m.className = 'mid';
+    m.textContent = r.sunk ? tx('sank') : tx('crates', { n: r.n }) + (r.full ? ' ' + tx('full') : '') + (r.lost ? ' ' + tx('lostShort', { n: r.lost }) : '');
+    const v = document.createElement('b'); v.textContent = r.sunk ? (r.lost ? `-${r.lost}` : '0') : `+${r.value - r.lost}`;
+    li.append(a, m, v); ul.append(li);
+  });
+  card.append(ul);
+  const tot = document.createElement('p'); tot.className = 'total';
+  tot.textContent = tx('total', { s: G.score }) + (G.score > best ? ' · ' + tx('newBest') : best ? ' · ' + tx('best', { b: best }) : '');
+  card.append(tot);
+  const btn = document.createElement('button'); btn.className = 'primary'; btn.type = 'button'; btn.textContent = tx('again');
+  btn.addEventListener('click', newDay); card.append(btn);
+  $('over').hidden = false; btn.focus({ preventScroll: true });
+}
+
+/* ---------- loop ---------- */
+let last = performance.now();
+function frame(now) {
+  const dt = Math.min(.05, (now - last) / 1000); last = now;
+  if (G.phase !== 'end') for (let k = 0; k < 2; k++) update(dt / 2);
+  render(G.t);
+  requestAnimationFrame(frame);
+}
+fit();
+newDay();
+requestAnimationFrame(t => { last = t; frame(t); });
+</script>
+</body>
+</html>

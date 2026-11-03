@@ -1,0 +1,134 @@
+<title>Dockhand</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Fusion Pixel 12px (SIL OFL 1.1, github.com/TakWolf/fusion-pixel-font), subset to the characters on this page */
+@font-face { font-family: 'DockPixel'; src: url(data:font/woff2;base64,__FONT_B64__) format('woff2'); font-display: block; }
+/* Layout: one quiet column — the log line and the boat's gauges on top, the diorama at a modest fixed scale in the middle,
+   the crate on the hook and the one action (sail) below. Rules live behind a small button. Text sizes are snapped from script
+   to whole multiples of the font's 12px grid in device pixels. */
+:root {
+  --mist: #e6ecee;      /* page, and the paper the diorama dissolves into (same as the canvas background) */
+  --ink: #1d2a33;
+  --ink-soft: #5f6f78;
+  --buoy: #e2622f;      /* accent: buoy orange */
+  --rope: #cbb995;      /* gauge track */
+  --danger: #c8393b;
+  --px: 'DockPixel', 'PingFang SC', 'Microsoft YaHei', monospace;
+  --t0: 12px;           /* small print */
+  --t1: 12px;           /* running text */
+  --t2: 24px;           /* title and the day's money */
+  color-scheme: light;
+}
+html, body { height: 100%; }
+html { padding-top: env(safe-area-inset-top, 0px); box-sizing: border-box; }
+[hidden] { display: none !important; }
+body {
+  margin: 0; box-sizing: border-box; background: var(--mist); color: var(--ink); font-family: var(--px); font-size: var(--t1); line-height: 1.4;
+  -webkit-font-smoothing: none; font-synthesis: none; font-weight: 400;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: flex; flex-direction: column; overflow: hidden; user-select: none; -webkit-user-select: none;
+}
+b { font-weight: 400; }
+.row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 28px; max-width: 900px; width: 100%; margin: 0 auto; }
+.top { padding-block: 16px 4px; position: relative; z-index: 25; }  /* stays clickable above the manifest overlay */
+h1 { font-size: var(--t2); font-weight: 400; margin: 0; line-height: 1; }
+.stat { display: flex; align-items: baseline; gap: 8px; color: var(--ink-soft); white-space: nowrap; }
+.stat b { color: var(--ink); font-variant-numeric: tabular-nums; }
+.stat.warn b { color: var(--danger); }
+.spacer { flex: 1; }
+.tools { display: flex; gap: 10px; align-items: center; }
+.gauges { padding-block: 8px; }
+.gauge { display: flex; align-items: center; gap: 10px; color: var(--ink-soft); white-space: nowrap; }
+.track { position: relative; width: 108px; height: 10px; background: var(--rope); }
+.track .zone { position: absolute; top: 0; bottom: 0; background: var(--danger); opacity: .45; }
+.track .needle { position: absolute; top: -4px; width: 4px; height: 18px; background: var(--ink); transform: translateX(-2px); }
+.track .fill { position: absolute; left: 0; top: 0; bottom: 0; background: var(--ink); }
+.gauge b { color: var(--ink); min-width: 5.5em; font-variant-numeric: tabular-nums; }
+.gauge.warn b { color: var(--danger); }
+#stage { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; position: relative; }
+canvas { display: block; image-rendering: pixelated; touch-action: none; outline: none; cursor: crosshair; }
+canvas.icon { image-rendering: pixelated; flex: none; cursor: default; }
+/* on touch screens the whole page is the crane's trackpad: no scrolling or zoom gestures there */
+header, .gauges, #stage, footer { touch-action: none; }
+.touch-only { display: none; }
+@media (pointer: coarse) { .touch-only { display: inline-block; } }
+#toast { position: absolute; left: 50%; top: 4px; transform: translateX(-50%); background: var(--ink); color: var(--mist); padding: 6px 14px; white-space: nowrap; pointer-events: none; transition: opacity .25s; }
+#toast[data-show="0"] { opacity: 0; }
+.bottom { padding-block: 6px max(18px, env(safe-area-inset-bottom, 0px)); }
+.hook { display: flex; align-items: center; gap: 14px; min-width: 0; }
+#cIcon { width: 48px; display: flex; align-items: center; justify-content: center; flex: none; }
+.hook .sub { color: var(--ink-soft); font-size: var(--t0); }
+.btns { display: flex; gap: 10px; flex: none; }
+@media (max-width: 640px) { .bottom { flex-wrap: nowrap; } .bottom .spacer { display: none; } .hook { flex: 1; } button { padding: 6px 12px; } }
+button { font: inherit; padding: 6px 18px; border: 3px solid var(--ink); background: transparent; color: var(--ink); cursor: pointer; }
+button.primary { background: var(--buoy); border-color: var(--buoy); color: #fff; }
+button.small { font-size: var(--t0); padding: 2px 10px; border-width: 2px; }
+button:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
+button:disabled { opacity: .35; cursor: default; }
+/* rules: a small button; the card shows on hover, keyboard focus, or a tap (data-open) */
+.tip { position: relative; }
+.tip-body { display: none; position: absolute; right: 0; top: calc(100% + 8px); z-index: 30; width: min(340px, calc(100vw - 32px)); background: var(--mist);
+  border: 3px solid var(--ink); padding: 12px 14px; font-size: var(--t0); color: var(--ink); white-space: normal; }
+.tip:hover .tip-body, .tip:focus-within .tip-body, .tip[data-open="1"] .tip-body { display: block; }
+.tip-body ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.tip-body li { padding-left: 1em; text-indent: -1em; }
+.tip-body li::before { content: '· '; }
+.tip-body em { font-style: normal; color: var(--buoy); }
+#over { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(230, 236, 238, .9); padding: 12px; z-index: 20; }
+#over .card { background: var(--mist); border: 3px solid var(--ink); padding: 18px 20px; width: min(460px, 100%); max-height: 100%; overflow: auto; display: grid; gap: 10px; }
+#over h2 { font-size: var(--t2); font-weight: 400; margin: 0; line-height: 1.1; }
+#over p { margin: 0; color: var(--ink-soft); }
+#over p.warn { color: var(--danger); }
+#over p.total { color: var(--ink); font-size: var(--t2); }
+.manifest { border-collapse: collapse; width: 100%; }
+.manifest th { font-weight: 400; color: var(--ink-soft); font-size: var(--t0); text-align: left; padding: 0 8px 4px 0; }
+.manifest td { padding: 3px 8px 3px 0; vertical-align: middle; }
+.manifest td.ic { width: 1%; }
+.manifest td.num, .manifest th.num { text-align: right; padding-right: 0; font-variant-numeric: tabular-nums; }
+.wbar { display: inline-flex; gap: 2px; vertical-align: middle; margin-right: 6px; }
+.wbar i { width: 6px; height: 10px; background: var(--ink); }
+.wbar i.off { background: var(--rope); }
+.ledger { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.ledger li { display: flex; gap: 12px; align-items: baseline; }
+.ledger .mid { color: var(--ink-soft); flex: 1; }
+@media (max-width: 640px) {
+  .row { gap: 6px 16px; }
+  .top { padding-top: 10px; }
+  .track { width: 70px; }
+  .gauge b { min-width: 0; }
+}
+</style>
+
+<header class="row top">
+  <h1 data-i18n="title">Dockhand</h1>
+  <div class="stat"><span id="hBoat"></span><b id="hBoatName"></b></div>
+  <div class="stat money"><span data-i18n="today">Today</span> <b id="hScore">0</b></div>
+  <div class="stat"><span data-i18n="thisBoat">This boat</span> <b id="hBoatVal">0</b></div>
+  <div class="stat" id="cTide" hidden><span data-i18n="tide">Tide</span> <b id="hTide"></b></div>
+  <div class="spacer"></div>
+  <div class="tools">
+    <div class="tip" id="tip">
+      <button class="small" id="bRules" type="button" aria-describedby="rules" data-i18n="rules">Rules</button>
+      <div class="tip-body" id="rules" role="tooltip">
+        <ul id="rulesList"></ul>
+      </div>
+    </div>
+    <button class="small" id="lang" type="button"></button>
+    <button class="small" id="mute" type="button" aria-pressed="false"></button>
+  </div>
+</header>
+<div class="row gauges">
+  <div class="gauge" id="gRoll"><span data-i18n="roll">Roll</span> <div class="track"><div class="zone" style="left:0"></div><div class="zone" style="right:0"></div><div class="needle" id="nRoll" style="left:50%"></div></div> <b id="vRoll">0°</b></div>
+  <div class="gauge" id="gPitch"><span data-i18n="pitch">Pitch</span> <div class="track"><div class="zone" style="left:0"></div><div class="zone" style="right:0"></div><div class="needle" id="nPitch" style="left:50%"></div></div> <b id="vPitch">0°</b></div>
+  <div class="gauge" id="gDraft"><span data-i18n="freeboard">Freeboard</span> <div class="track"><div class="fill" id="fDraft" style="width:100%"></div></div> <b id="vDraft">75cm</b></div>
+</div>
+<main id="stage">
+  <canvas id="c" tabindex="0" data-i18n-label="canvasLabel" aria-label="A dock and a cargo boat. Click the deck to drop the crate."></canvas>
+  <div id="toast" data-show="0"></div>
+</main>
+<div id="over" hidden><div class="card" id="overCard"></div></div>
+<footer class="row bottom">
+  <div class="hook"><div id="cIcon"></div><div><div id="cName"></div><div class="sub" id="cSub"></div></div></div>
+  <div class="spacer"></div>
+  <div class="btns"><button id="bRot" class="touch-only" type="button" data-i18n="rotate">Rotate</button><button id="bGo" class="primary" type="button" data-i18n="sail">Sail</button></div>
+</footer>
